@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "development": false,
+  "publishable": false,
+  "source_revision": {
+    "commit": "cc623010af913f5c81065b54ead07436b127ab7f",
+    "digest": "0ffb4d3bc3745aa9110fafc7583e20eadb1e55a383cbec314d62b05077479d5d"
+  },
+  "version": "0.1.0-dev",
+  "runtime_mode": "external",
+  "assets": [
+    {
+      "os": "macos",
+      "architecture": "arm64",
+      "minimum_macos": "13.0",
+      "filename": "swiftpods-0.1.0-dev-macos-13.0-arm64.zip",
+      "sha256": "8bdb6010684f4fc51818c293cc4bfbd42f73a709b251a466333e0daa597590d0",
+      "url": "https://github.com/swiftpods-org/swiftpods-release/releases/download/v0.1.0-dev/swiftpods-0.1.0-dev-macos-13.0-arm64.zip"
+    }
+  ],
+  "acceptance": [
+    {
+      "architecture": "arm64",
+      "minimum_macos": "13.0",
+      "filename": "evidence-macos-13.0-arm64.zip",
+      "sha256": "b9b02f295eaed5a5ff2d2a92597505ea96c0af3e2918e527221ab6781836e8da",
+      "stable_acceptance": "not_established"
+    }
+  ],
+  "installer_sha256": "566683f61abcce59c01ea9a968fc837e4c5378fc804fab6cfa59b496c5fc2ad2"
+}

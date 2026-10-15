@@ -52,6 +52,9 @@ jobs:
       - name: Install the pinned public Homebrew formula
         run: |
           set -euo pipefail
+          brew update
+          brew install ruby@3.4
+          brew upgrade ruby@3.4
           brew tap swiftpods-org/release https://github.com/swiftpods-org/swiftpods-release.git
           git -C "$(brew --repository swiftpods-org/release)" fetch --depth=1 origin "$TAP_REVISION"
           git -C "$(brew --repository swiftpods-org/release)" checkout --detach "$TAP_REVISION"

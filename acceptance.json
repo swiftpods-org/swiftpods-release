@@ -1,0 +1,3464 @@
+{
+  "status": "passed",
+  "engine": "swift",
+  "reports": [
+    {
+      "report": "native-units.json",
+      "sha256": "bbe134615069a4980eb8d9e3cde7b2c543c7a558134da4b12ed9bb6480c4bccb",
+      "verified": [
+        "Swift unit corpus with compiler warnings treated as errors"
+      ],
+      "unverified": []
+    },
+    {
+      "report": "native-sources.json",
+      "sha256": "08ac0dc600e58ccd8184dd520d7f61326ae63f587a551393f9cae54fd584020f",
+      "verified": [
+        "local spec repository",
+        "lazy CDN version index and podspec fetch",
+        "transitive version constraints",
+        "HTTP archive with SHA-256",
+        "hardened JSON without Ruby",
+        "offline deployment reinstall",
+        "changed deployment rejected",
+        "changed podspec rejected in deployment",
+        "corrupt cache rejected",
+        "recovery restores source trees",
+        "native Git commit source and offline reinstall",
+        "hardened prepare rejected before execution"
+      ],
+      "unverified": [
+        "public CDN",
+        "authenticated remote sources",
+        "full compatibility matrix"
+      ]
+    },
+    {
+      "report": "native-management.json",
+      "sha256": "527030696f0afdbecf29d0bcf9169a62f78d2fd3d528423e161b841bda3eee1c",
+      "verified": [
+        "Git CHECKOUT OPTIONS pin across fresh cache and upstream branch advance",
+        "selected pod update and offline deployment",
+        "Git cache list/clean and unowned file preservation",
+        "repo add/list/update/remove with dirty-checkout rejection",
+        "spec cat/which and ipc spec/podfile",
+        "typed plugin contexts and option lookup",
+        "plugin source-provider resolution and undeclared-plugin filtering",
+        "lockfile and hook lifecycle ordering",
+        "skip_pods_project_generation"
+      ],
+      "unverified": [
+        "full private plugin APIs",
+        "repository publication",
+        "all command aliases",
+        "remote SSH authentication"
+      ]
+    },
+    {
+      "report": "native-runtime.json",
+      "sha256": "1b8d0de044a8fcb75bc9fc7de0e0a007e1bda1554a956a4e5d196e9599e5c6d2",
+      "verified": [
+        "SIGINT cancellation with Ruby and descendant SIGINT/SIGTERM traps",
+        "bounded child group cleanup and exit status 130",
+        "concurrent install rejection and rollback after cancellation",
+        "overlapping HTTP downloads with bounded pool",
+        "clean and preserve_paths source effects",
+        "lock_pod_sources permissions",
+        "preserve_pod_file_structure PBX hierarchy",
+        "incremental/offline/deployment installs avoid repeated prepare",
+        "clean-install bypass and explicit clean/lock opt-outs"
+      ],
+      "unverified": [
+        "cancellation during remote authenticated operations"
+      ]
+    },
+    {
+      "report": "native-source-contract.json",
+      "sha256": "4865625dc61b75a9c23f990631d6d0bcc3bee5d5ca5f9882aaff361e075ecc00",
+      "verified": [
+        "external HTTP archive with authenticated headers and SHA-256",
+        "external HTTP offline deployment and byte-preserved lockfile",
+        "snapshot listing and targeted cleanup",
+        "cache verify detects a modified source snapshot",
+        "Subversion frozen revision in a fresh cache, selected update and offline deployment",
+        "canonical external podspec checksums do not repeat Ruby evaluation within an install",
+        "imported frozen Bundler environment accepts and rejects explicit version requirements"
+      ],
+      "unverified": [
+        "Mercurial executable is unavailable on this host",
+        "remote VCS authentication"
+      ]
+    },
+    {
+      "report": "native-compatibility.json",
+      "sha256": "b7cf4818a3c2074a6de9138c9b5e3427ed18ef866be23264b26e5199f786a1fa",
+      "verified": [
+        "locked spec repository preserved when an earlier source gains the same version",
+        "unchanged version pin remains a constraint when a new dependency conflicts",
+        "warning/modular/configuration options do not enable prereleases",
+        "public hook FileAccessor delegates to native file selection",
+        "empty public patterns retain visible headers",
+        "private/project/excluded/nested headers",
+        "ARC selection",
+        "resource bundles and ODR exclusions",
+        "external lockfile edit survives failed install and recovery",
+        "compatible requirement edits retain installed version pins",
+        "removing a prerelease requirement conflicts with its locked prerelease; explicit update selects a stable version",
+        "new direct declaration does not unlock an existing transitive dependency",
+        "targeted update keeps distinct shared edges pinned; explicitly selecting the shared dependency unlocks it",
+        "identical dependency strings follow baseline lock-graph deduplication during targeted update",
+        "full root/abstract/concrete target tree with stable object identities across all four hooks",
+        "same-named targets in separate projects preserve their distinct hook mutations",
+        "installation results remain nil before generation and when generation is skipped"
+      ],
+      "unverified": [
+        "arbitrary private plugin APIs",
+        "remote authenticated sources"
+      ]
+    },
+    {
+      "report": "native-ecosystem.json",
+      "sha256": "6642321a311f4174c5f437165ed9ac340bd4301e4b1277db77c8c9d750aa2f94",
+      "verified": [
+        "CMake Xcode generation, integration, regeneration and two real application runs",
+        "directory source pattern expansion in a real build",
+        "existing local Swift package compiled and linked alongside a pod",
+        "existing package PBX objects and Package.resolved byte preservation across install/deintegrate/reinstall",
+        "known existing package/pod duplicate rejected without deleting the package",
+        "init infers the real consumer platform; silent and verbose output are exercised",
+        "skipped project generation preserves user project bytes and runs the correct hooks",
+        "pre_integrate executes when install options disable consumer integration",
+        "BridgeSupport generated by the Apple metadata tool from aggregate declarations"
+      ],
+      "unverified": [
+        "arbitrary CMake generators and projects",
+        "unknown SDK identities inside packages"
+      ]
+    },
+    {
+      "report": "native-contract.json",
+      "sha256": "4e370735ec9f1549ac7213cddd9ee3fb3003d7fd6ba0e1c0763c485c5a4f03cc",
+      "verified": [
+        "implicit platform and project extension analysis",
+        "Swift requirements affect actual compiled Swift language mode",
+        "nested framework/static-library header mappings",
+        "public Installer PodTarget Specification AggregateTarget identity",
+        "typed BuildType and singleton pre_install override",
+        "live consumer and pod project mutations",
+        "development scheme sharing and disabled managed phase paths",
+        "DSL options and negative requirements",
+        "native lib/spec lint with actual Xcode builds",
+        "repo push preserves lint option values and immutable versions",
+        "rejected remote push preserves the registered checkout",
+        "iOS device build produces tagged on-demand asset packs and deintegration restores settings",
+        "fresh consumer configurations attach aggregate xcconfig files"
+      ],
+      "unverified": [
+        "remote publication authentication",
+        "arbitrary private plugin APIs"
+      ]
+    },
+    {
+      "report": "native-variants.json",
+      "sha256": "7219d0105f5c733303b51bb2a4e09f651b92548b1ec625bd98b69d6978eddbe5",
+      "verified": [
+        "six simultaneously built and executed macOS consumers",
+        "five library variants and four transitive variants",
+        "equivalent consumers share a library target",
+        "selected subspec source and header isolation",
+        "archive and static/dynamic framework outputs do not collide",
+        "transitive XCFramework compilation and framework embedding",
+        "direct resources and resource bundles belong to the selected variant",
+        "two independent XCTest and app spec variants",
+        "pre-install pod target counts and preserved post-install settings",
+        "byte-stable offline deployment",
+        "old explicit dependencies removed after variant changes",
+        "deintegration and reintegration of variant dependencies"
+      ],
+      "unverified": [
+        "identical reference project bytes",
+        "all plugin APIs",
+        "all Apple platform/linkage combinations",
+        "physical devices and signing"
+      ]
+    },
+    {
+      "report": "native-platforms.json",
+      "sha256": "f5424666705d805592a8319869bb39e274e799aad6e76f9cc3f5808b89a56a08",
+      "verified": [
+        "real dynamic XCFramework with ten platform/variant slices",
+        "three pod linkage modes built for macOS iOS tvOS watchOS visionOS and Mac Catalyst",
+        "watchOS arm64_32 binary inspected and linked",
+        "device/macOS/Mac Catalyst archives checked separately from simulator builds",
+        "required build macro consumed by compiled C source"
+      ],
+      "unverified": [
+        "physical device execution",
+        "signed archives",
+        "Swift binary module stability",
+        "test/app host matrices outside existing macOS/iOS fixtures"
+      ]
+    },
+    {
+      "report": "native-configuration.json",
+      "sha256": "dc4a92bbe1f0c5c708d96a51f4b77dd0de031c95376cbdf5d4e026cd3133a1e0",
+      "verified": [
+        "configuration-filtered direct/localized/compiled resources and resource bundles",
+        "dynamic library resource bundles remain inside the owning framework",
+        "Podfile local variables and hook closures cannot replace adapter protocol state",
+        "static/dynamic framework and archive SDK link filtering",
+        "dynamic SDK embed filtering",
+        "native XCFramework destination selection",
+        "three macOS pod linkage modes",
+        "custom Staging configuration",
+        "multiple pod projects",
+        "same-configuration incremental asset exclusion",
+        "offline byte-stable deployment",
+        "hardened filtering without Ruby",
+        "user resource and exclusion preservation through deintegration",
+        "iOS simulator execution with enabled and disabled assets"
+      ],
+      "unverified": [
+        "same-platform target variants",
+        "all platform/linkage combinations",
+        "physical devices and distribution signing",
+        "all third-party asset formats"
+      ]
+    },
+    {
+      "report": "native-layout.json",
+      "sha256": "3fd8327b55dbc6b4bff77d2592734d22d9992c72e04a5434ae7fa8e4844b41b9",
+      "verified": [
+        "isolated reachable project graphs",
+        "cross-project library/test/app/resource dependencies",
+        "main-project shared schemes resolve actual child containers",
+        "real macOS XCTest and app execution in three linkage modes",
+        "macOS generated/named unit test hosts",
+        "iOS named/generated UI host interaction and hosted unit tests",
+        "live child project and configuration identity",
+        "immediate saves and independent child root settings compile",
+        "public plugin subproject/all-project contexts",
+        "cross-project hook dependencies are idempotent",
+        "preserved original Xcode project in Git pod sources",
+        "byte-stable offline deployment reinstall",
+        "stale child/scheme/workspace cleanup preserves changed project files",
+        "hardened split-project UI execution without Ruby"
+      ],
+      "unverified": [
+        "same-platform target variants",
+        "complete public/private plugin APIs",
+        "conditional SDK/consumer resources",
+        "physical devices and distribution signing",
+        "all platform/linkage combinations"
+      ]
+    },
+    {
+      "report": "native-integration.json",
+      "sha256": "1df611a85c9ac82e2fae6854f2316cc9828eb223a26237957929cfd60783fc7d",
+      "verified": [
+        "three native linkage variants build and run with resources and live hooks"
+      ],
+      "unverified": [
+        "complete reference compatibility",
+        "Intel",
+        "physical devices",
+        "signing"
+      ]
+    },
+    {
+      "report": "native-batch.json",
+      "sha256": "1490f7ed6ef25566c5f208b9b2c1ca49cd86c0af514561ac760ef5b259fcf62b",
+      "verified": [
+        "Debug/Staging/Release executable results in three linkage modes",
+        "configuration-specific linking",
+        "complete/search_paths/none inheritance",
+        "per-file ARC and prefix header",
+        "direct localized resources and asset compilation",
+        "multiple generated projects and hooks",
+        "macOS/iOS platform separation with simulator/device builds",
+        "live DSL Project.open/save",
+        "Installer and Project identity across hooks",
+        "immediate hook saves and hook phase execution",
+        "offline deployment byte-stable reinstall",
+        "removed dependency reference cleanup",
+        "settings and user edits preserved during deintegrate",
+        "deintegrate and reinstall",
+        "stale workspace reference removal"
+      ],
+      "unverified": [
+        "conditional consumer resources and vendored SDKs",
+        "all private plugin APIs",
+        "same-platform target variants",
+        "physical devices and signing",
+        "full platform matrix"
+      ]
+    },
+    {
+      "report": "native-script-phases.json",
+      "sha256": "c6bc06a078e4ad7d516650b70dd3d5728794fd51da1de921bbc60a27c9ef2b13",
+      "verified": [
+        "podspec singular/plural, subspec and platform phases",
+        "Podfile phases",
+        "all five execution positions",
+        "scripts deferred until build",
+        "generated header compilation and native environment",
+        "file lists, dependency file and incremental regeneration",
+        "always-out-of-date phases",
+        "three pod linkage modes",
+        "idempotent offline reinstall",
+        "phase removal preserves user scripts",
+        "build phase failure propagation",
+        "invalid phases rejected before managed changes",
+        "nested hardened script rejection without Ruby",
+        "Xcode user script sandbox with declared inputs/outputs"
+      ],
+      "unverified": [
+        "iOS script execution",
+        "all script interpreters",
+        "complete DSL/API parity"
+      ]
+    },
+    {
+      "report": "native-vendor.json",
+      "sha256": "07d7bf969d793af9934d0ba9c5b34d64ce48043ad2f38bbb09a1686b33d1acef",
+      "verified": [
+        "static/dynamic vendored frameworks and static libraries",
+        "native XCFramework destination selection with distinct binary/header payloads",
+        "macOS build and run with static library/static framework/dynamic framework wrapper pods",
+        "iOS simulator build and run",
+        "iOS unsigned device build from same install",
+        "transitive binary SDK pod from pinned Git source",
+        "dynamic SDK embedding only",
+        "SDK removal cleans link and embed references",
+        "missing declared SDK rejected",
+        "pod xcconfig search paths preserved",
+        "offline deployment reinstall"
+      ],
+      "unverified": [
+        "physical devices",
+        "signing",
+        "Intel execution",
+        "all third-party SDKs"
+      ]
+    },
+    {
+      "report": "native-supplementary.json",
+      "sha256": "dea98e63def0591e4e301fb26548372ebe9a50ef4c4a1767aebdb695dbf2884d",
+      "verified": [
+        "explicit test/app selection and default exclusion",
+        "real macOS XCTest execution",
+        "standalone/generated/named unit tests execute in Debug/Release for all three linkage modes",
+        "app spec build and run",
+        "scoped source/resource/dependency isolation",
+        "resource bundles",
+        "generated schemes and Info.plist",
+        "scheme removal",
+        "test scheme environment",
+        "three library linkage modes",
+        "offline deployment reinstall",
+        "hardened JSON selection and XCTest without Ruby",
+        "unknown test type rejection before managed changes"
+      ],
+      "unverified": [
+        "UI runners",
+        "other Apple platforms",
+        "signing",
+        "complete reference parity"
+      ]
+    },
+    {
+      "report": "native-contract-reference.json",
+      "sha256": "df4ca8afd7d41e6c0e06e55194196c27f4ead65a118980cc2ec1a2294968c671",
+      "verified": [
+        "26 baseline Podfile methods",
+        "15 installation option values and defaults",
+        "53 complete attribute declarations and consumer values",
+        "singular aliases and per-platform setter restrictions",
+        "library/test inheritance and xcconfig conflict semantics",
+        "negative DSL types and options"
+      ],
+      "unverified": [
+        "all build effects for every attribute and platform"
+      ]
+    },
+    {
+      "report": "native-compatibility-reference.json",
+      "sha256": "e6fffa2051a1dea14dd5ebf092d79a2ad2ec9a6226134de1c01a82a7bf8237af",
+      "verified": [
+        "locked spec repository preserved when an earlier source gains the same version",
+        "unchanged version pin remains a constraint when a new dependency conflicts",
+        "warning/modular/configuration options do not enable prereleases",
+        "public hook FileAccessor delegates to native file selection",
+        "empty public patterns retain visible headers",
+        "private/project/excluded/nested headers",
+        "ARC selection",
+        "resource bundles and ODR exclusions",
+        "external lockfile edit survives failed install and recovery",
+        "compatible requirement edits retain installed version pins",
+        "removing a prerelease requirement conflicts with its locked prerelease; explicit update selects a stable version",
+        "new direct declaration does not unlock an existing transitive dependency",
+        "targeted update keeps distinct shared edges pinned; explicitly selecting the shared dependency unlocks it",
+        "identical dependency strings follow baseline lock-graph deduplication during targeted update",
+        "full root/abstract/concrete target tree with stable object identities across all four hooks",
+        "same-named targets in separate projects preserve their distinct hook mutations",
+        "installation results remain nil before generation and when generation is skipped"
+      ],
+      "unverified": [
+        "arbitrary private plugin APIs",
+        "remote authenticated sources"
+      ]
+    },
+    {
+      "report": "native-reference.json",
+      "sha256": "b66022e6f3a63be3063ac09290bd80f25f0bb11b28d7fff1487a1b2b340836ae",
+      "verified": [
+        "independently executed engines",
+        "matching pod version",
+        "matching prepare/hook order",
+        "matching hook build settings",
+        "framework and resource-bundle generation"
+      ],
+      "unverified": [
+        "byte-for-byte project/lock equivalence",
+        "complete DSL/API compatibility",
+        "reference matrix beyond this fixture"
+      ]
+    },
+    {
+      "report": "native-variant-reference.json",
+      "sha256": "b35b550e809dfd30d3e218ebb44f2f43348a0d2c0ee15431f791f7ebc253c033",
+      "verified": [
+        "independent native and reference installs",
+        "matching five library and four transitive variants",
+        "matching exact target labels, selected source sets, library packaging, framework linkage and build minima",
+        "matching test/app spec variant scheme counts",
+        "matching pre-install variant counts and post-install build-setting preservation"
+      ],
+      "unverified": [
+        "reference variant runtime execution; simultaneous reference XCFramework copies produce duplicate outputs",
+        "reference archive header isolation",
+        "identical project bytes",
+        "all platform/linkage combinations"
+      ]
+    },
+    {
+      "report": "native-ecosystem-reference.json",
+      "sha256": "115e36597c05ad3d532966ed7f09efdb8314c29e26be9bf9fa2f2284abf7f94d",
+      "verified": [
+        "CMake Xcode generation, integration, regeneration and two real application runs",
+        "directory source pattern expansion in a real build",
+        "existing local Swift package compiled and linked alongside a pod",
+        "existing package PBX objects and Package.resolved byte preservation across install/deintegrate/reinstall",
+        "known existing package/pod duplicate rejected without deleting the package",
+        "init infers the real consumer platform; silent and verbose output are exercised",
+        "skipped project generation preserves user project bytes and runs the correct hooks",
+        "pre_integrate executes when install options disable consumer integration",
+        "BridgeSupport generated by the Apple metadata tool from aggregate declarations",
+        "unchanged pure Podfile returned to the upstream installer after explicit native deintegration, then built and ran",
+        "1.16.2 and 1.17.0 upstream lockfiles install in deployment without Pods and remain byte-for-byte unchanged",
+        "existing upstream installation replaced directly by the native installer, then built and ran",
+        "BridgeSupport installer outputs observed in the same Apple-tool environment; differences recorded explicitly",
+        "BridgeSupport command failure preserves the same missing resource reference without fabricating a file"
+      ],
+      "unverified": [
+        "arbitrary CMake generators and projects",
+        "unknown SDK identities inside packages"
+      ]
+    },
+    {
+      "report": "native-script-reference.json",
+      "sha256": "57e792d37202f7caa1d2315564efb01646bb2d6423ab41a51760752898d647cb",
+      "verified": [
+        "independent native/reference script phase generation",
+        "matching pod/Podfile phase order and options",
+        "matching generated-header builds and execution",
+        "matching incremental file-list regeneration",
+        "sandboxed script execution"
+      ],
+      "unverified": [
+        "complete DSL/API parity",
+        "other platforms",
+        "all script shells"
+      ]
+    },
+    {
+      "report": "native-supplementary-reference.json",
+      "sha256": "1344cc3039d6810769494b75212826b090c5aee9b2f54930097445d039945dcb",
+      "verified": [
+        "independent native/reference test/app selection",
+        "matching resolved names and product types",
+        "matching test dependency/resource isolation",
+        "real XCTest passes in both engines",
+        "app spec builds/runs in both engines",
+        "test scheme environment and Info.plist markers"
+      ],
+      "unverified": [
+        "exact project/lock bytes",
+        "hosted tests",
+        "other platforms",
+        "complete DSL/API parity"
+      ]
+    },
+    {
+      "report": "native-ui.json",
+      "sha256": "73cf53fa14e23fc09edc123bb3492ed26b25e2827a5baaf46981324c90517d81",
+      "verified": [
+        "iOS simulator UI runner launches a named app spec and taps its button",
+        "named/generated UI hosts and standalone/hosted unit tests execute in Debug/Release in every selected linkage mode",
+        "Swift standalone and hosted unit test execution",
+        "Swift app spec execution",
+        "own UI/unit resources and Info.plist",
+        "test scheme environment",
+        "runner and bundle-loader host associations",
+        "consumer isolation",
+        "offline deployment reinstall",
+        "managed scheme removal",
+        "hardened UI selection without Ruby",
+        "ad-hoc simulator signing",
+        "three library linkage modes"
+      ],
+      "unverified": [
+        "macOS/tvOS UI execution",
+        "physical devices",
+        "distribution signing",
+        "complete DSL/API parity"
+      ]
+    },
+    {
+      "report": "native-batch-reference.json",
+      "sha256": "bc7fbde4aa6bd2455a18a08e6cb6d6b00056357425fd2d82088428cb5456b94e",
+      "verified": [
+        "same Debug/Staging/Release executable results in independent engines",
+        "complete/search_paths/none inheritance",
+        "nested inheritance declarations match reference analysis including none after search_paths",
+        "matching per-file ARC, prefix header and localized resource behavior",
+        "multiple pod projects",
+        "live project hooks and immediate saves",
+        "Installer and Project identity",
+        "lockfile lifecycle"
+      ],
+      "unverified": [
+        "project/lock byte parity",
+        "all plugin APIs",
+        "multi-platform reference matrix",
+        "conditional SDK and consumer resources"
+      ]
+    },
+    {
+      "report": "native-layout-reference.json",
+      "sha256": "1f7f8e08ff0ab63518c4e417871d9d68204ed6c3e7cb1045e5e74a14ffc4e1e9",
+      "verified": [
+        "project target ownership and child scheme containers match reference",
+        "independent child root build settings affect real compilation",
+        "live Installer/child project/configuration identity and immediate saves",
+        "public install context project lists",
+        "matching idempotent cross-project hook dependencies",
+        "original source projects preserved through preserve_paths",
+        "matching macOS XCTest and app resource/dependency results",
+        "matching named-host iOS UI interaction through split projects"
+      ],
+      "unverified": [
+        "exact project bytes",
+        "all plugin APIs",
+        "all platform/linkage combinations",
+        "distribution signing and physical devices"
+      ]
+    },
+    {
+      "report": "native-configuration-reference.json",
+      "sha256": "910f0d6ae3d89685c42298a0147328f7f1eccb3148a31ce4ada796c4eab68516",
+      "verified": [
+        "matching Debug/Staging/Release macOS app execution",
+        "matching direct/localized/compiled resources and resource bundles",
+        "matching conditional SDK link and embed behavior",
+        "static XCFramework and dynamic raw-framework pod modes",
+        "matching enabled/disabled iOS simulator app results",
+        "multiple pod projects",
+        "resource and SDK paths with spaces",
+        "unrelated user resource preservation"
+      ],
+      "unverified": [
+        "exact project bytes",
+        "reference incremental script scheduling; fixture marks copy/embed scripts always run",
+        "all resource formats",
+        "all platform/linkage combinations",
+        "physical devices and distribution signing"
+      ]
+    },
+    {
+      "report": "native-mercurial.json",
+      "sha256": "a289dfce3171b5ba6cda5ee7b80abc179dad7e3bddf2487e439e5acaad14233f",
+      "verified": [
+        "actual Mercurial repository and full revision pin",
+        "advanced upstream head remains pinned across a fresh cache",
+        "selected update installs the new revision and version",
+        "offline deployment preserves lock bytes",
+        "source snapshot cache integrity"
+      ],
+      "unverified": [
+        "authenticated remote Mercurial transport"
+      ]
+    },
+    {
+      "report": "native-benchmarks.json",
+      "sha256": "7dd93409b67036a3aa38a9be7e6118dd84ae5e7c278d98ce4d1fb596a851a057",
+      "verified": [
+        "cold/warm/no-op/targeted-update timings on a fixed local fixture",
+        "targeted update preserves unrelated lock",
+        "build input bytes and modification times are measured",
+        "no-op preserves all measured build input bytes and timestamps"
+      ],
+      "unverified": [
+        "public network performance",
+        "real application install performance",
+        "comparison with another manager"
+      ]
+    },
+    {
+      "report": "native-resolver-reference.json",
+      "sha256": "9d3a0a3d5a8f911c0e01a30f95cb8a1167629332f95e09374b1498d95113659c",
+      "verified": [
+        "32 deterministic generated graphs and four cycle/backtracking graphs resolved independently in both engines",
+        "same chosen root versions and dependency closure",
+        "same conflict outcomes",
+        "root requirement ordering and transitive version constraints",
+        "cycles across roots and default subspecs rejected; acyclic version fallback retained"
+      ],
+      "unverified": [
+        "exhaustive graph space",
+        "remote repository transport",
+        "exact cycle diagnostic text: reference internal ArgumentError on the merged cycle is retained in reference.log"
+      ]
+    },
+    {
+      "report": "native-ui-reference.json",
+      "sha256": "b823c667d6398e949a9735a3dadc7ead19df141221aeb6b7cba9c89a5cf9cb84",
+      "verified": [
+        "independent UI product types and host associations match",
+        "UI XCTest launches app spec and taps button in both engines",
+        "matching library value changes from 7 to 8",
+        "Swift UI tests and app specs",
+        "own UI resources and Info.plist",
+        "UI scheme environment"
+      ],
+      "unverified": [
+        "exact Xcode project bytes",
+        "generated host implementation parity",
+        "other platforms",
+        "complete DSL/API parity"
+      ]
+    },
+    {
+      "report": "native-acceptance-harness.json",
+      "sha256": "d30383e756f40d63f0ed9ceb9df7b35f8c8bd9be067923996fc27866ff339e41",
+      "verified": [
+        "missing, failed and skipped evidence rejected",
+        "stale source, contract and toolchain rejected",
+        "replaced executable rejected",
+        "external artifact hash checked",
+        "unverified external gates and dirty revisions cannot establish stable acceptance"
+      ],
+      "unverified": []
+    },
+    {
+      "report": "native-swift-binary.json",
+      "sha256": "a9bca194aa4f71b6a9f1741b0377fe421140df36efda3bed5522c0e0a6d90633",
+      "verified": [
+        "real dynamic Swift framework with library evolution enabled",
+        "serialized swiftmodule and private interfaces removed before consumption",
+        "public swiftinterface consumed by an actual Swift application",
+        "binary SDK linked and embedded across three pod linkage modes",
+        "Debug/Release applications execute and return the SDK value"
+      ],
+      "unverified": [
+        "cross-compiler module stability; producer and consumer use the same toolchain"
+      ]
+    },
+    {
+      "report": "native-xcconfig.json",
+      "sha256": "fc892fe3873136af06a0f9eb02e62d4fce1b0a2f1de157ca91b283341bf85c09",
+      "verified": [
+        "explicit project outside installation directory",
+        "xcconfig paths resolved relative to PBX groups",
+        "existing user base configuration and optional aggregate include retained",
+        "conditional sdk/configuration settings consumed by Debug/Release applications",
+        "inherited definitions from user include-chain preserved",
+        "hook resolved_build_setting reads the included SDKROOT",
+        "external project deintegration preserves user base configuration"
+      ],
+      "unverified": [
+        "all xcconfig conditional axes and substitution operators"
+      ]
+    },
+    {
+      "report": "native-xcconfig-reference.json",
+      "sha256": "f3554a1ea9fe091bd2dc2fc23084b5998f680938da2460e88e0072a98b4f5098",
+      "verified": [
+        "explicit project outside installation directory",
+        "xcconfig paths resolved relative to PBX groups",
+        "existing user base configuration and optional aggregate include retained",
+        "conditional sdk/configuration settings consumed by Debug/Release applications",
+        "inherited definitions from user include-chain preserved",
+        "hook resolved_build_setting reads the included SDKROOT",
+        "external project deintegration preserves user base configuration"
+      ],
+      "unverified": [
+        "all xcconfig conditional axes and substitution operators"
+      ]
+    },
+    {
+      "report": "native-host-platforms.json",
+      "sha256": "ca1d6a82866d0880c78753339832d2143c24dbfb8a2138b1c65006bd922bcc1e",
+      "verified": [
+        "real app, standalone/generated/named unit targets and generated/named UI runners build for the explicitly listed SDK configurations"
+      ],
+      "unverified": [
+        "execution on these destinations",
+        "device SDK supplementary builds and signing",
+        "watchOS supplementary targets",
+        "macOS UI interaction",
+        "complete supplementary host matrix"
+      ]
+    },
+    {
+      "report": "native-distribution.json",
+      "sha256": "219a4cf4ac8133e543539f51772d039d66144a6c76a1b1166f5d3222a773a0cf",
+      "verified": [
+        "runtime inventory excludes reference engine/gems",
+        "relocation",
+        "release URLs",
+        "checksummed installer",
+        "idempotent install",
+        "bad checksum rejected",
+        "tampered adapter rejected",
+        "release preparation rejects a changed inventory and leaves no partial destination",
+        "current 60-build/18-archive matrix includes platform architecture configuration and signing status"
+      ],
+      "unverified": [
+        "remote publication",
+        "Homebrew installation",
+        "signing",
+        "Intel"
+      ]
+    },
+    {
+      "report": "native-packaged-variants.json",
+      "sha256": "8f624f81c4e678e2643477646fece219faf7e0441a36d6962f05e0618a8cdcf4",
+      "verified": [
+        "six simultaneously built and executed macOS consumers",
+        "five library variants and four transitive variants",
+        "equivalent consumers share a library target",
+        "selected subspec source and header isolation",
+        "archive and static/dynamic framework outputs do not collide",
+        "transitive XCFramework compilation and framework embedding",
+        "direct resources and resource bundles belong to the selected variant",
+        "two independent XCTest and app spec variants",
+        "pre-install pod target counts and preserved post-install settings",
+        "byte-stable offline deployment",
+        "old explicit dependencies removed after variant changes",
+        "deintegration and reintegration of variant dependencies"
+      ],
+      "unverified": [
+        "identical reference project bytes",
+        "all plugin APIs",
+        "all Apple platform/linkage combinations",
+        "physical devices and signing"
+      ]
+    },
+    {
+      "report": "native-packaged-configuration.json",
+      "sha256": "7e468a59bcc729bb09be3448a174a324b05c6ebf3a756e76327e2febf1e6eae3",
+      "verified": [
+        "configuration-filtered direct/localized/compiled resources and resource bundles",
+        "dynamic library resource bundles remain inside the owning framework",
+        "Podfile local variables and hook closures cannot replace adapter protocol state",
+        "static/dynamic framework and archive SDK link filtering",
+        "dynamic SDK embed filtering",
+        "native XCFramework destination selection",
+        "three macOS pod linkage modes",
+        "custom Staging configuration",
+        "multiple pod projects",
+        "same-configuration incremental asset exclusion",
+        "offline byte-stable deployment",
+        "hardened filtering without Ruby",
+        "user resource and exclusion preservation through deintegration",
+        "iOS simulator execution with enabled and disabled assets"
+      ],
+      "unverified": [
+        "same-platform target variants",
+        "all platform/linkage combinations",
+        "physical devices and distribution signing",
+        "all third-party asset formats"
+      ]
+    },
+    {
+      "report": "native-packaged-layout.json",
+      "sha256": "66c655a586dd10f888a1f467eb52ac1b3fe466328dd7e8661ac15f6eba81158b",
+      "verified": [
+        "isolated reachable project graphs",
+        "cross-project library/test/app/resource dependencies",
+        "main-project shared schemes resolve actual child containers",
+        "real macOS XCTest and app execution in three linkage modes",
+        "macOS generated/named unit test hosts",
+        "iOS named/generated UI host interaction and hosted unit tests",
+        "live child project and configuration identity",
+        "immediate saves and independent child root settings compile",
+        "public plugin subproject/all-project contexts",
+        "cross-project hook dependencies are idempotent",
+        "preserved original Xcode project in Git pod sources",
+        "byte-stable offline deployment reinstall",
+        "stale child/scheme/workspace cleanup preserves changed project files",
+        "hardened split-project UI execution without Ruby"
+      ],
+      "unverified": [
+        "same-platform target variants",
+        "complete public/private plugin APIs",
+        "conditional SDK/consumer resources",
+        "physical devices and distribution signing",
+        "all platform/linkage combinations"
+      ]
+    },
+    {
+      "report": "native-packaged-ui.json",
+      "sha256": "a8ccc3f3e41dcad941aeebb6bc2279329b5bf00f104802700a7ebac651ec1bca",
+      "verified": [
+        "iOS simulator UI runner launches a named app spec and taps its button",
+        "named/generated UI hosts and standalone/hosted unit tests execute in Debug/Release in every selected linkage mode",
+        "Swift standalone and hosted unit test execution",
+        "Swift app spec execution",
+        "own UI/unit resources and Info.plist",
+        "test scheme environment",
+        "runner and bundle-loader host associations",
+        "consumer isolation",
+        "offline deployment reinstall",
+        "managed scheme removal",
+        "hardened UI selection without Ruby",
+        "ad-hoc simulator signing"
+      ],
+      "unverified": [
+        "macOS/tvOS UI execution",
+        "physical devices",
+        "distribution signing",
+        "complete DSL/API parity"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "T-001",
+      "reports": [
+        "native-compatibility-reference.json",
+        "native-compatibility.json",
+        "native-contract-reference.json",
+        "native-integration.json",
+        "native-resolver-reference.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-002",
+      "reports": [
+        "native-contract-reference.json",
+        "native-compatibility.json",
+        "native-compatibility-reference.json",
+        "native-integration.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-003",
+      "reports": [
+        "native-compatibility-reference.json",
+        "native-compatibility.json",
+        "native-contract-reference.json",
+        "native-integration.json",
+        "native-resolver-reference.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-004",
+      "reports": [
+        "native-contract-reference.json",
+        "native-compatibility.json",
+        "native-compatibility-reference.json",
+        "native-integration.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-005",
+      "reports": [
+        "native-units.json",
+        "native-sources.json",
+        "native-management.json",
+        "native-source-contract.json",
+        "native-compatibility-reference.json",
+        "native-resolver-reference.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-006",
+      "reports": [
+        "native-units.json",
+        "native-sources.json",
+        "native-management.json",
+        "native-source-contract.json",
+        "native-compatibility-reference.json",
+        "native-mercurial.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-007",
+      "reports": [
+        "native-units.json",
+        "native-sources.json",
+        "native-management.json",
+        "native-source-contract.json",
+        "native-compatibility-reference.json",
+        "native-mercurial.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-008",
+      "reports": [
+        "native-units.json",
+        "native-sources.json",
+        "native-management.json",
+        "native-source-contract.json",
+        "native-compatibility-reference.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-009",
+      "reports": [
+        "native-contract.json",
+        "native-batch-reference.json",
+        "native-variant-reference.json",
+        "native-compatibility-reference.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-010",
+      "reports": [
+        "native-contract.json",
+        "native-batch-reference.json",
+        "native-variant-reference.json",
+        "native-compatibility-reference.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-011",
+      "reports": [
+        "native-platforms.json",
+        "native-vendor.json",
+        "native-reference.json",
+        "native-configuration-reference.json",
+        "native-layout-reference.json",
+        "native-supplementary-reference.json",
+        "native-ui-reference.json",
+        "native-script-reference.json",
+        "native-swift-binary.json",
+        "native-host-platforms.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-012",
+      "reports": [
+        "native-platforms.json",
+        "native-vendor.json",
+        "native-reference.json",
+        "native-configuration-reference.json",
+        "native-layout-reference.json",
+        "native-supplementary-reference.json",
+        "native-ui-reference.json",
+        "native-script-reference.json",
+        "native-swift-binary.json",
+        "native-host-platforms.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-013",
+      "reports": [
+        "native-platforms.json",
+        "native-vendor.json",
+        "native-reference.json",
+        "native-configuration-reference.json",
+        "native-layout-reference.json",
+        "native-supplementary-reference.json",
+        "native-ui-reference.json",
+        "native-script-reference.json",
+        "native-host-platforms.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-014",
+      "reports": [
+        "native-platforms.json",
+        "native-vendor.json",
+        "native-reference.json",
+        "native-configuration-reference.json",
+        "native-layout-reference.json",
+        "native-supplementary-reference.json",
+        "native-ui-reference.json",
+        "native-script-reference.json",
+        "native-host-platforms.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-015",
+      "reports": [
+        "native-ecosystem-reference.json",
+        "native-configuration-reference.json",
+        "native-layout-reference.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-016",
+      "reports": [
+        "native-ecosystem-reference.json",
+        "native-configuration-reference.json",
+        "native-layout-reference.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-017",
+      "reports": [
+        "native-ecosystem-reference.json",
+        "native-configuration-reference.json",
+        "native-layout-reference.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-018",
+      "reports": [
+        "native-ecosystem-reference.json",
+        "native-configuration-reference.json",
+        "native-layout-reference.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-019",
+      "reports": [
+        "native-source-contract.json",
+        "native-distribution.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-020",
+      "reports": [
+        "native-sources.json",
+        "native-runtime.json",
+        "native-integration.json",
+        "native-compatibility.json",
+        "native-mercurial.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-021",
+      "reports": [
+        "native-sources.json",
+        "native-runtime.json",
+        "native-integration.json",
+        "native-compatibility.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-022",
+      "reports": [
+        "native-sources.json",
+        "native-runtime.json",
+        "native-integration.json",
+        "native-compatibility.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-023",
+      "reports": [
+        "native-sources.json",
+        "native-runtime.json",
+        "native-integration.json",
+        "native-compatibility.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-024",
+      "reports": [
+        "native-sources.json",
+        "native-runtime.json",
+        "native-integration.json",
+        "native-compatibility.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "T-025",
+      "reports": [
+        "native-acceptance-harness.json",
+        "native-configuration-reference.json",
+        "native-ecosystem-reference.json",
+        "native-layout-reference.json",
+        "native-xcconfig-reference.json"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "AC-001",
+      "requirements": [
+        "T-001",
+        "T-002",
+        "T-015"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "AC-002",
+      "requirements": [
+        "T-002",
+        "T-010"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "AC-003",
+      "requirements": [
+        "T-005",
+        "T-006",
+        "T-007",
+        "T-015"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "AC-004",
+      "requirements": [
+        "T-011",
+        "T-012",
+        "T-013",
+        "T-014"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "AC-005",
+      "requirements": [
+        "T-016",
+        "T-017"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "AC-006",
+      "requirements": [
+        "T-019"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "AC-007",
+      "requirements": [
+        "T-018"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "AC-008",
+      "requirements": [
+        "T-003",
+        "T-004",
+        "T-024"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "AC-009",
+      "requirements": [
+        "T-021",
+        "T-022",
+        "T-023"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    },
+    {
+      "id": "AC-010",
+      "requirements": [
+        "T-025"
+      ],
+      "status": "covered_by_current_reports",
+      "missing_reports": []
+    }
+  ],
+  "api_coverage": [
+    {
+      "category": "podfile_methods",
+      "name": "install!",
+      "report": "native-contract-reference.json",
+      "case": "dsl:install!",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "ensure_bundler!",
+      "report": "native-contract-reference.json",
+      "case": "dsl:ensure_bundler!",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "pod",
+      "report": "native-contract-reference.json",
+      "case": "dsl:pod",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json",
+        "native-compatibility-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "podspec",
+      "report": "native-contract-reference.json",
+      "case": "dsl:podspec",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "target",
+      "report": "native-contract-reference.json",
+      "case": "dsl:target",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "script_phase",
+      "report": "native-contract-reference.json",
+      "case": "dsl:script_phase",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "abstract_target",
+      "report": "native-contract-reference.json",
+      "case": "dsl:abstract_target",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "abstract!",
+      "report": "native-contract-reference.json",
+      "case": "dsl:abstract!",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "inherit!",
+      "report": "native-contract-reference.json",
+      "case": "dsl:inherit!",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "platform",
+      "report": "native-contract-reference.json",
+      "case": "dsl:platform",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "project",
+      "report": "native-contract-reference.json",
+      "case": "dsl:project",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "xcodeproj",
+      "report": "native-contract-reference.json",
+      "case": "dsl:xcodeproj",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "link_with",
+      "report": "native-contract-reference.json",
+      "case": "dsl:link_with",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "inhibit_all_warnings!",
+      "report": "native-contract-reference.json",
+      "case": "dsl:inhibit_all_warnings!",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "use_modular_headers!",
+      "report": "native-contract-reference.json",
+      "case": "dsl:use_modular_headers!",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "use_frameworks!",
+      "report": "native-contract-reference.json",
+      "case": "dsl:use_frameworks!",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "supports_swift_versions",
+      "report": "native-contract-reference.json",
+      "case": "dsl:supports_swift_versions",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "workspace",
+      "report": "native-contract-reference.json",
+      "case": "dsl:workspace",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "generate_bridge_support!",
+      "report": "native-contract-reference.json",
+      "case": "dsl:generate_bridge_support!",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "set_arc_compatibility_flag!",
+      "report": "native-contract-reference.json",
+      "case": "dsl:set_arc_compatibility_flag!",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "source",
+      "report": "native-contract-reference.json",
+      "case": "dsl:source",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "plugin",
+      "report": "native-contract-reference.json",
+      "case": "dsl:plugin",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "pre_install",
+      "report": "native-contract-reference.json",
+      "case": "dsl:pre_install",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "pre_integrate",
+      "report": "native-contract-reference.json",
+      "case": "dsl:pre_integrate",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "post_install",
+      "report": "native-contract-reference.json",
+      "case": "dsl:post_install",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podfile_methods",
+      "name": "post_integrate",
+      "report": "native-contract-reference.json",
+      "case": "dsl:post_integrate",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "installation_options",
+      "name": "clean",
+      "report": "native-contract-reference.json",
+      "case": "option:clean",
+      "effects": [
+        "native-contract.json",
+        "native-runtime.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "installation_options",
+      "name": "deduplicate_targets",
+      "report": "native-contract-reference.json",
+      "case": "option:deduplicate_targets",
+      "effects": [
+        "native-contract.json",
+        "native-batch.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "installation_options",
+      "name": "deterministic_uuids",
+      "report": "native-contract-reference.json",
+      "case": "option:deterministic_uuids",
+      "effects": [
+        "native-contract.json",
+        "native-batch.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "installation_options",
+      "name": "integrate_targets",
+      "report": "native-contract-reference.json",
+      "case": "option:integrate_targets",
+      "effects": [
+        "native-contract.json",
+        "native-batch.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "installation_options",
+      "name": "lock_pod_sources",
+      "report": "native-contract-reference.json",
+      "case": "option:lock_pod_sources",
+      "effects": [
+        "native-contract.json",
+        "native-runtime.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "installation_options",
+      "name": "warn_for_multiple_pod_sources",
+      "report": "native-contract-reference.json",
+      "case": "option:warn_for_multiple_pod_sources",
+      "effects": [
+        "native-contract.json",
+        "native-batch.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "installation_options",
+      "name": "warn_for_unused_master_specs_repo",
+      "report": "native-contract-reference.json",
+      "case": "option:warn_for_unused_master_specs_repo",
+      "effects": [
+        "native-contract.json",
+        "native-batch.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "installation_options",
+      "name": "share_schemes_for_development_pods",
+      "report": "native-contract-reference.json",
+      "case": "option:share_schemes_for_development_pods",
+      "effects": [
+        "native-contract.json",
+        "native-batch.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "installation_options",
+      "name": "disable_input_output_paths",
+      "report": "native-contract-reference.json",
+      "case": "option:disable_input_output_paths",
+      "effects": [
+        "native-contract.json",
+        "native-batch.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "installation_options",
+      "name": "preserve_pod_file_structure",
+      "report": "native-contract-reference.json",
+      "case": "option:preserve_pod_file_structure",
+      "effects": [
+        "native-contract.json",
+        "native-runtime.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "installation_options",
+      "name": "generate_multiple_pod_projects",
+      "report": "native-contract-reference.json",
+      "case": "option:generate_multiple_pod_projects",
+      "effects": [
+        "native-contract.json",
+        "native-batch.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "installation_options",
+      "name": "incremental_installation",
+      "report": "native-contract-reference.json",
+      "case": "option:incremental_installation",
+      "effects": [
+        "native-contract.json",
+        "native-runtime.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "installation_options",
+      "name": "skip_pods_project_generation",
+      "report": "native-contract-reference.json",
+      "case": "option:skip_pods_project_generation",
+      "effects": [
+        "native-contract.json",
+        "native-batch.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "installation_options",
+      "name": "parallel_pod_downloads",
+      "report": "native-contract-reference.json",
+      "case": "option:parallel_pod_downloads",
+      "effects": [
+        "native-contract.json",
+        "native-runtime.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "installation_options",
+      "name": "parallel_pod_download_thread_pool_size",
+      "report": "native-contract-reference.json",
+      "case": "option:parallel_pod_download_thread_pool_size",
+      "effects": [
+        "native-contract.json",
+        "native-runtime.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "app_host_name",
+      "report": "native-contract-reference.json",
+      "case": "attribute:app_host_name",
+      "effects": [
+        "native-supplementary.json",
+        "native-supplementary-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "authors",
+      "report": "native-contract-reference.json",
+      "case": "attribute:authors",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "changelog",
+      "report": "native-contract-reference.json",
+      "case": "attribute:changelog",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "cocoapods_version",
+      "report": "native-contract-reference.json",
+      "case": "attribute:cocoapods_version",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "compiler_flags",
+      "report": "native-contract-reference.json",
+      "case": "attribute:compiler_flags",
+      "effects": [
+        "native-batch.json",
+        "native-batch-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "default_subspecs",
+      "report": "native-contract-reference.json",
+      "case": "attribute:default_subspecs",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "dependencies",
+      "report": "native-contract-reference.json",
+      "case": "attribute:dependencies",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "deprecated",
+      "report": "native-contract-reference.json",
+      "case": "attribute:deprecated",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "deprecated_in_favor_of",
+      "report": "native-contract-reference.json",
+      "case": "attribute:deprecated_in_favor_of",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "description",
+      "report": "native-contract-reference.json",
+      "case": "attribute:description",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "documentation_url",
+      "report": "native-contract-reference.json",
+      "case": "attribute:documentation_url",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "exclude_files",
+      "report": "native-contract-reference.json",
+      "case": "attribute:exclude_files",
+      "effects": [
+        "native-layout.json",
+        "native-layout-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "frameworks",
+      "report": "native-contract-reference.json",
+      "case": "attribute:frameworks",
+      "effects": [
+        "native-vendor.json",
+        "native-platforms.json",
+        "native-swift-binary.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "header_dir",
+      "report": "native-contract-reference.json",
+      "case": "attribute:header_dir",
+      "effects": [
+        "native-layout.json",
+        "native-layout-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "header_mappings_dir",
+      "report": "native-contract-reference.json",
+      "case": "attribute:header_mappings_dir",
+      "effects": [
+        "native-layout.json",
+        "native-layout-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "homepage",
+      "report": "native-contract-reference.json",
+      "case": "attribute:homepage",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "info_plist",
+      "report": "native-contract-reference.json",
+      "case": "attribute:info_plist",
+      "effects": [
+        "native-supplementary.json",
+        "native-supplementary-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "libraries",
+      "report": "native-contract-reference.json",
+      "case": "attribute:libraries",
+      "effects": [
+        "native-vendor.json",
+        "native-platforms.json",
+        "native-swift-binary.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "license",
+      "report": "native-contract-reference.json",
+      "case": "attribute:license",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "module_map",
+      "report": "native-contract-reference.json",
+      "case": "attribute:module_map",
+      "effects": [
+        "native-layout.json",
+        "native-layout-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "module_name",
+      "report": "native-contract-reference.json",
+      "case": "attribute:module_name",
+      "effects": [
+        "native-layout.json",
+        "native-layout-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "name",
+      "report": "native-contract-reference.json",
+      "case": "attribute:name",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "on_demand_resources",
+      "report": "native-contract-reference.json",
+      "case": "attribute:on_demand_resources",
+      "effects": [
+        "native-ecosystem.json",
+        "native-ecosystem-reference.json",
+        "native-supplementary-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "platforms",
+      "report": "native-contract-reference.json",
+      "case": "attribute:platforms",
+      "effects": [
+        "native-batch.json",
+        "native-batch-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "pod_target_xcconfig",
+      "report": "native-contract-reference.json",
+      "case": "attribute:pod_target_xcconfig",
+      "effects": [
+        "native-configuration.json",
+        "native-configuration-reference.json",
+        "native-xcconfig-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "prefix_header_contents",
+      "report": "native-contract-reference.json",
+      "case": "attribute:prefix_header_contents",
+      "effects": [
+        "native-layout.json",
+        "native-layout-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "prefix_header_file",
+      "report": "native-contract-reference.json",
+      "case": "attribute:prefix_header_file",
+      "effects": [
+        "native-layout.json",
+        "native-layout-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "prepare_command",
+      "report": "native-contract-reference.json",
+      "case": "attribute:prepare_command",
+      "effects": [
+        "native-sources.json",
+        "native-source-contract.json",
+        "native-mercurial.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "preserve_paths",
+      "report": "native-contract-reference.json",
+      "case": "attribute:preserve_paths",
+      "effects": [
+        "native-sources.json",
+        "native-source-contract.json",
+        "native-mercurial.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "private_header_files",
+      "report": "native-contract-reference.json",
+      "case": "attribute:private_header_files",
+      "effects": [
+        "native-layout.json",
+        "native-layout-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "project_header_files",
+      "report": "native-contract-reference.json",
+      "case": "attribute:project_header_files",
+      "effects": [
+        "native-layout.json",
+        "native-layout-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "public_header_files",
+      "report": "native-contract-reference.json",
+      "case": "attribute:public_header_files",
+      "effects": [
+        "native-layout.json",
+        "native-layout-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "readme",
+      "report": "native-contract-reference.json",
+      "case": "attribute:readme",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "requires_app_host",
+      "report": "native-contract-reference.json",
+      "case": "attribute:requires_app_host",
+      "effects": [
+        "native-supplementary.json",
+        "native-supplementary-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "requires_arc",
+      "report": "native-contract-reference.json",
+      "case": "attribute:requires_arc",
+      "effects": [
+        "native-batch.json",
+        "native-batch-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "resource_bundles",
+      "report": "native-contract-reference.json",
+      "case": "attribute:resource_bundles",
+      "effects": [
+        "native-ecosystem.json",
+        "native-ecosystem-reference.json",
+        "native-supplementary-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "resources",
+      "report": "native-contract-reference.json",
+      "case": "attribute:resources",
+      "effects": [
+        "native-ecosystem.json",
+        "native-ecosystem-reference.json",
+        "native-supplementary-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "scheme",
+      "report": "native-contract-reference.json",
+      "case": "attribute:scheme",
+      "effects": [
+        "native-supplementary.json",
+        "native-supplementary-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "screenshots",
+      "report": "native-contract-reference.json",
+      "case": "attribute:screenshots",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "script_phases",
+      "report": "native-contract-reference.json",
+      "case": "attribute:script_phases",
+      "effects": [
+        "native-script-phases.json",
+        "native-script-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "social_media_url",
+      "report": "native-contract-reference.json",
+      "case": "attribute:social_media_url",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "source",
+      "report": "native-contract-reference.json",
+      "case": "attribute:source",
+      "effects": [
+        "native-sources.json",
+        "native-source-contract.json",
+        "native-mercurial.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "source_files",
+      "report": "native-contract-reference.json",
+      "case": "attribute:source_files",
+      "effects": [
+        "native-layout.json",
+        "native-layout-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "static_framework",
+      "report": "native-contract-reference.json",
+      "case": "attribute:static_framework",
+      "effects": [
+        "native-vendor.json",
+        "native-platforms.json",
+        "native-swift-binary.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "summary",
+      "report": "native-contract-reference.json",
+      "case": "attribute:summary",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "swift_versions",
+      "report": "native-contract-reference.json",
+      "case": "attribute:swift_versions",
+      "effects": [
+        "native-batch.json",
+        "native-batch-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "test_type",
+      "report": "native-contract-reference.json",
+      "case": "attribute:test_type",
+      "effects": [
+        "native-supplementary.json",
+        "native-supplementary-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "user_target_xcconfig",
+      "report": "native-contract-reference.json",
+      "case": "attribute:user_target_xcconfig",
+      "effects": [
+        "native-configuration.json",
+        "native-configuration-reference.json",
+        "native-xcconfig-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "vendored_frameworks",
+      "report": "native-contract-reference.json",
+      "case": "attribute:vendored_frameworks",
+      "effects": [
+        "native-vendor.json",
+        "native-platforms.json",
+        "native-swift-binary.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "vendored_libraries",
+      "report": "native-contract-reference.json",
+      "case": "attribute:vendored_libraries",
+      "effects": [
+        "native-vendor.json",
+        "native-platforms.json",
+        "native-swift-binary.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "version",
+      "report": "native-contract-reference.json",
+      "case": "attribute:version",
+      "effects": [
+        "native-contract.json",
+        "native-integration.json",
+        "native-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "weak_frameworks",
+      "report": "native-contract-reference.json",
+      "case": "attribute:weak_frameworks",
+      "effects": [
+        "native-vendor.json",
+        "native-platforms.json",
+        "native-swift-binary.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "podspec_attributes",
+      "name": "xcconfig",
+      "report": "native-contract-reference.json",
+      "case": "attribute:xcconfig",
+      "effects": [
+        "native-configuration.json",
+        "native-configuration-reference.json",
+        "native-xcconfig-reference.json"
+      ],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "FileAccessor.source_files",
+      "report": "native-compatibility-reference.json",
+      "case": "FileAccessor.source_files",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "FileAccessor.headers",
+      "report": "native-compatibility-reference.json",
+      "case": "FileAccessor.headers",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "FileAccessor.public_headers",
+      "report": "native-compatibility-reference.json",
+      "case": "FileAccessor.public_headers",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "FileAccessor.private_headers",
+      "report": "native-compatibility-reference.json",
+      "case": "FileAccessor.private_headers",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "FileAccessor.project_headers",
+      "report": "native-compatibility-reference.json",
+      "case": "FileAccessor.project_headers",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "FileAccessor.arc_source_files",
+      "report": "native-compatibility-reference.json",
+      "case": "FileAccessor.arc_source_files",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "FileAccessor.non_arc_source_files",
+      "report": "native-compatibility-reference.json",
+      "case": "FileAccessor.non_arc_source_files",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "FileAccessor.resources",
+      "report": "native-compatibility-reference.json",
+      "case": "FileAccessor.resources",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "FileAccessor.resource_bundles",
+      "report": "native-compatibility-reference.json",
+      "case": "FileAccessor.resource_bundles",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "FileAccessor.resource_bundle_files",
+      "report": "native-compatibility-reference.json",
+      "case": "FileAccessor.resource_bundle_files",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "FileAccessor.on_demand_resources",
+      "report": "native-compatibility-reference.json",
+      "case": "FileAccessor.on_demand_resources",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "FileAccessor.on_demand_resources_files",
+      "report": "native-compatibility-reference.json",
+      "case": "FileAccessor.on_demand_resources_files",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "FileAccessor.root",
+      "report": "native-compatibility-reference.json",
+      "case": "FileAccessor.root",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "FileAccessor.spec",
+      "report": "native-compatibility-reference.json",
+      "case": "FileAccessor.spec",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "FileAccessor.platform_name",
+      "report": "native-compatibility-reference.json",
+      "case": "FileAccessor.platform_name",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "Project.new",
+      "report": "native-compatibility-reference.json",
+      "case": "Project.new",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "Project.new_target",
+      "report": "native-compatibility-reference.json",
+      "case": "Project.new_target",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "Project.new_group",
+      "report": "native-compatibility-reference.json",
+      "case": "Project.new_group",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "Project.new_file",
+      "report": "native-compatibility-reference.json",
+      "case": "Project.new_file",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "Project.save",
+      "report": "native-compatibility-reference.json",
+      "case": "Project.save",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "Project.unknown_setter_rejected",
+      "report": "native-compatibility-reference.json",
+      "case": "Project.unknown_setter_rejected",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "Installer.target_installation_results",
+      "report": "native-supplementary-reference.json",
+      "case": "Installer.target_installation_results",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "PodTarget.specs",
+      "report": "native-supplementary-reference.json",
+      "case": "PodTarget.specs",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "TargetInstallationResult.native_target",
+      "report": "native-supplementary-reference.json",
+      "case": "TargetInstallationResult.native_target",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "TargetInstallationResult.resource_bundle_targets",
+      "report": "native-supplementary-reference.json",
+      "case": "TargetInstallationResult.resource_bundle_targets",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "TargetInstallationResult.test_specs_by_native_target",
+      "report": "native-supplementary-reference.json",
+      "case": "TargetInstallationResult.test_specs_by_native_target",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "TargetInstallationResult.app_specs_by_native_target",
+      "report": "native-supplementary-reference.json",
+      "case": "TargetInstallationResult.app_specs_by_native_target",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "TargetInstallationResult.non_library_specs_by_native_target",
+      "report": "native-supplementary-reference.json",
+      "case": "TargetInstallationResult.non_library_specs_by_native_target",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "TargetInstallationResult.test_resource_bundle_targets",
+      "report": "native-supplementary-reference.json",
+      "case": "TargetInstallationResult.test_resource_bundle_targets",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "TargetInstallationResult.app_resource_bundle_targets",
+      "report": "native-supplementary-reference.json",
+      "case": "TargetInstallationResult.app_resource_bundle_targets",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "TargetInstallationResult.native_target_for_spec",
+      "report": "native-supplementary-reference.json",
+      "case": "TargetInstallationResult.native_target_for_spec",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "Podfile.reject_duplicate_pre_integrate",
+      "report": "native-compatibility-reference.json",
+      "case": "Podfile.reject_duplicate_pre_integrate",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "Podfile.reject_duplicate_post_install",
+      "report": "native-compatibility-reference.json",
+      "case": "Podfile.reject_duplicate_post_install",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "Podfile.reject_duplicate_post_integrate",
+      "report": "native-compatibility-reference.json",
+      "case": "Podfile.reject_duplicate_post_integrate",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "Podfile.replace_duplicate_pre_install",
+      "report": "native-compatibility-reference.json",
+      "case": "Podfile.replace_duplicate_pre_install",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "HookValues.unknown_getter_rejected",
+      "report": "native-compatibility-reference.json",
+      "case": "HookValues.unknown_getter_rejected",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "Podfile.target_definitions",
+      "report": "native-compatibility-reference.json",
+      "case": "Podfile.target_definitions",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "Podfile.target_definition_list",
+      "report": "native-compatibility-reference.json",
+      "case": "Podfile.target_definition_list",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "Podfile.root_target_definitions",
+      "report": "native-compatibility-reference.json",
+      "case": "Podfile.root_target_definitions",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "TargetDefinition.parent",
+      "report": "native-compatibility-reference.json",
+      "case": "TargetDefinition.parent",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "TargetDefinition.children",
+      "report": "native-compatibility-reference.json",
+      "case": "TargetDefinition.children",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "TargetDefinition.recursive_children",
+      "report": "native-compatibility-reference.json",
+      "case": "TargetDefinition.recursive_children",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "TargetDefinition.root",
+      "report": "native-compatibility-reference.json",
+      "case": "TargetDefinition.root",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "TargetDefinition.root?",
+      "report": "native-compatibility-reference.json",
+      "case": "TargetDefinition.root?",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "TargetDefinition.podfile",
+      "report": "native-compatibility-reference.json",
+      "case": "TargetDefinition.podfile",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    },
+    {
+      "category": "public_hook_operations",
+      "name": "Installer.target_installation_results_lifecycle",
+      "report": "native-compatibility-reference.json",
+      "case": "Installer.target_installation_results_lifecycle",
+      "effects": [],
+      "missing_effect_reports": [],
+      "status": "covered_by_current_case"
+    }
+  ],
+  "external_gates": {
+    "signed_distribution": {
+      "status": "unverified"
+    },
+    "notarization": {
+      "status": "unverified"
+    },
+    "physical_devices": {
+      "status": "unverified"
+    },
+    "intel_execution": {
+      "status": "unverified"
+    },
+    "minimum_macos_execution": {
+      "status": "unverified"
+    },
+    "clean_homebrew_installation": {
+      "status": "unverified"
+    },
+    "remote_ci": {
+      "status": "unverified"
+    },
+    "swift_binary_module_stability": {
+      "status": "passed",
+      "scope": "macOS arm64: Swift 6.1.3 producer to Swift 6.4 consumer, public interfaces only, three linkage modes, Debug/Release, six actual application executions",
+      "evidence": [
+        {
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-20261015/test-results/native-swift-binary.json",
+          "sha256": "7fd9a64dc82bb3aa14deb65bcb41505d124b715cde14cfec74f11c9624a691d4",
+          "archive_path": "external/swift_binary_module_stability/0-native-swift-binary.json"
+        },
+        {
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-20261015/test-results/cross-compiler.log",
+          "sha256": "7fc338f008d4c188a03849a985d909a8ed5205e944eb8dd8bccca78b76d8524f",
+          "archive_path": "external/swift_binary_module_stability/1-cross-compiler.log"
+        },
+        {
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/cross-toolchain/producer-6.1.3/producer.json",
+          "sha256": "f1a55c4ae2d26fe6c61d2011414aed22d2e202a5f56c5b39081edfe3ab962807",
+          "archive_path": "external/swift_binary_module_stability/2-producer.json"
+        },
+        {
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/cross-toolchain/producer-6.1.3/producer.log",
+          "sha256": "0beeeda341158c75346ef3503ecc7e7c409139002b61e1d859484aca2855e0c4",
+          "archive_path": "external/swift_binary_module_stability/3-producer.log"
+        },
+        {
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/cross-toolchain/producer-6.1.3/SDK.swift",
+          "sha256": "caedf51b94066f48b9e12f6012e0c2c55a44f5a67e89461687c863f0eb74f3be",
+          "archive_path": "external/swift_binary_module_stability/4-SDK.swift"
+        },
+        {
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/cross-toolchain/produce-independent.py",
+          "sha256": "36c6c24629951e3acee62ab03b8a65ee3d3cf6c74e20b21ba10bd3bb0184bdf4",
+          "archive_path": "external/swift_binary_module_stability/5-produce-independent.py"
+        },
+        {
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/cross-toolchain/provenance.json",
+          "sha256": "8eca3cf2520920ae255b6f7bf25c8369be70d07511e86b930aa7535883494b57",
+          "archive_path": "external/swift_binary_module_stability/6-provenance.json"
+        },
+        {
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/cross-toolchain/signature.log",
+          "sha256": "56736a945313f336b07aa0cefe868600a98d9c18a963a96a6e6a01b3f1ac26a1",
+          "archive_path": "external/swift_binary_module_stability/7-signature.log"
+        },
+        {
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-20261015/.build/native-swift-binary-t5suqz53/dynamic-Debug.log",
+          "sha256": "1cb166b7f9687e0bf12bf073d35e764a1d46bb2a446a232b7f10447cd9b0fb5a",
+          "archive_path": "external/swift_binary_module_stability/8-dynamic-Debug.log"
+        },
+        {
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-20261015/.build/native-swift-binary-t5suqz53/dynamic-Release.log",
+          "sha256": "49dc8544ed5b32a654986ff7e67334dc62145bc992b9f39f6bd0130f53c823b0",
+          "archive_path": "external/swift_binary_module_stability/9-dynamic-Release.log"
+        },
+        {
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-20261015/.build/native-swift-binary-t5suqz53/library-Debug.log",
+          "sha256": "eb3bdbcbd20c82c1f2336d88e3ebc46ac11b8c9299c709aaaff100af586f59c2",
+          "archive_path": "external/swift_binary_module_stability/10-library-Debug.log"
+        },
+        {
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-20261015/.build/native-swift-binary-t5suqz53/library-Release.log",
+          "sha256": "8b99d862afc6331509f60cae244e0d1987c7eef2cdfdc7c3da672972314edd81",
+          "archive_path": "external/swift_binary_module_stability/11-library-Release.log"
+        },
+        {
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-20261015/.build/native-swift-binary-t5suqz53/static-Debug.log",
+          "sha256": "7304824bb5ea8231445d68d4696e73a53814fe048b3ac3fe90a9c55342e630cd",
+          "archive_path": "external/swift_binary_module_stability/12-static-Debug.log"
+        },
+        {
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-20261015/.build/native-swift-binary-t5suqz53/static-Release.log",
+          "sha256": "6b6d6b7025e12276279ab5105328f30aa9feb0c394aadc786fe6ff7b26b598b2",
+          "archive_path": "external/swift_binary_module_stability/13-static-Release.log"
+        },
+        {
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/cross-toolchain/producer-6.1.3/SwiftBinaryKit.framework/Versions/A/Modules/SwiftBinaryKit.swiftmodule/arm64-apple-macos.swiftinterface",
+          "sha256": "37bd361f19e35c78e38ffa7129c6d62065087c9518e5cecc57f0c2f66d9c0a3a",
+          "archive_path": "external/swift_binary_module_stability/14-arm64-apple-macos.swiftinterface"
+        },
+        {
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/cross-toolchain/producer-6.1.3/SwiftBinaryKit.framework/Versions/A/SwiftBinaryKit",
+          "sha256": "3913e7bb3f09cfcabec4878b2d6abd351e40f6b65344fd6c71e43709d8e23bc5",
+          "archive_path": "external/swift_binary_module_stability/15-SwiftBinaryKit"
+        }
+      ]
+    },
+    "signed_apple_archives": {
+      "status": "unverified"
+    },
+    "supplementary_host_matrix": {
+      "status": "unverified"
+    }
+  },
+  "stable_acceptance": "not_established",
+  "source_revision": {
+    "commit": "cc623010af913f5c81065b54ead07436b127ab7f",
+    "dirty": false
+  },
+  "compatibility_differences": [
+    {
+      "id": "BridgeSupport.aggregate_header_path",
+      "feature": "BridgeSupport",
+      "reference": "installer invokes the Apple tool with a nonexistent Pods/Pods-Demo-umbrella.h path; no metadata produced",
+      "native": "invokes the same tool with the generated aggregate header and produces metadata",
+      "parity": false,
+      "report": "native-ecosystem-reference.json",
+      "classification": "accepted_improvement"
+    }
+  ],
+  "blocking_compatibility_differences": [],
+  "compatibility_policy": {
+    "mode": "input_compatible",
+    "inherit_reference_bugs": false,
+    "input_contract": [
+      "Podfile",
+      "podspec",
+      "podspec.json",
+      "Ruby helpers and supported public hooks",
+      "existing lockfiles"
+    ],
+    "improvements": {
+      "BridgeSupport.aggregate_header_path": {
+        "feature": "BridgeSupport",
+        "kind": "reference_bug_fix",
+        "preserves_input_contract": true,
+        "report": "native-ecosystem-reference.json",
+        "evidence": {
+          "native-ecosystem.json": [
+            "BridgeSupport.unchanged_manifest",
+            "BridgeSupport.correct_aggregate_header",
+            "BridgeSupport.aggregate_declarations"
+          ],
+          "native-ecosystem-reference.json": [
+            "BridgeSupport.unchanged_manifest",
+            "BridgeSupport.correct_aggregate_header",
+            "BridgeSupport.aggregate_declarations"
+          ]
+        },
+        "rationale": "Resolve the generated aggregate header through its actual directory and produce metadata for the unchanged manifest.",
+        "documentation": "docs/BridgeSupport.md"
+      }
+    }
+  },
+  "coverage_policy": "A mapped report is evidence for its recorded cases, not proof of every combination. Stable acceptance also requires all external gates and a clean source revision.",
+  "swift_unit_tests": 89,
+  "stages": [
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/bootstrap.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-0.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/unit_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-1.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/prepare_reference.py",
+        "--gem-home",
+        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-2.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_sources_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-3.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_management_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-4.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_runtime_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-5.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_source_contract_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-6.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_compatibility_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-7.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_contract_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-8.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_ecosystem_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-9.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_platform_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-10.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_variant_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-11.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_configuration_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-12.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_layout_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-13.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_batch_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-14.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_integration.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-15.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_vendor_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-16.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_script_phase_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-17.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_supplementary_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-18.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_ui_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-19.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/contract_reference.py",
+        "--gem-home",
+        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-20.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_compatibility_tests.py",
+        "--gem-home",
+        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-21.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/reference_compare.py",
+        "--gem-home",
+        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-22.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/variant_reference.py",
+        "--gem-home",
+        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-23.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_ecosystem_tests.py",
+        "--gem-home",
+        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-24.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/script_phase_reference.py",
+        "--gem-home",
+        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-25.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/supplementary_reference.py",
+        "--gem-home",
+        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-26.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/batch_reference.py",
+        "--gem-home",
+        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-27.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/configuration_reference.py",
+        "--gem-home",
+        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-28.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/layout_reference.py",
+        "--gem-home",
+        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-29.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/ui_reference.py",
+        "--gem-home",
+        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-30.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_mercurial_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-31.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_benchmarks.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-32.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/resolver_reference.py",
+        "--gem-home",
+        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-33.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_swift_binary_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-34.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/acceptance_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-35.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_xcconfig_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-36.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_xcconfig_tests.py",
+        "--gem-home",
+        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-37.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_host_platform_tests.py"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-38.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/package.py",
+        "--destination",
+        "dist/SwiftPods-0.1.0-dev-readiness"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-39.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_distribution_tests.py",
+        "dist/SwiftPods-0.1.0-dev-readiness"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-40.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_variant_tests.py",
+        "--bundle",
+        "dist/SwiftPods-0.1.0-dev-readiness"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-41.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_configuration_tests.py",
+        "--bundle",
+        "dist/SwiftPods-0.1.0-dev-readiness"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-42.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_layout_tests.py",
+        "--bundle",
+        "dist/SwiftPods-0.1.0-dev-readiness"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-43.log"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/native_ui_tests.py",
+        "--bundle",
+        "dist/SwiftPods-0.1.0-dev-readiness"
+      ],
+      "exit_status": 0,
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-44.log"
+    }
+  ],
+  "full": true,
+  "apple_integration_omitted": false,
+  "schema_version": 1,
+  "command": [
+    "scripts/check.py",
+    "--full",
+    "--reference-gem-home",
+    "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems",
+    "--package",
+    "dist/SwiftPods-0.1.0-dev-readiness"
+  ],
+  "source_digest": "0ffb4d3bc3745aa9110fafc7583e20eadb1e55a383cbec314d62b05077479d5d",
+  "contract_digest": "1f095e381721769a75292c3e034ab6811c23d9ed91b71cd79aefbc3da36d06ec",
+  "started_at": "2026-10-15T14:46:15.469611+00:00",
+  "host": {
+    "os": "27.0.1",
+    "architecture": "arm64"
+  },
+  "toolchain": {
+    "xcode": "Xcode 27.0\nBuild version 27A266a",
+    "swift": "swift-driver version: 1.168.6 Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "external_ruby": {
+      "engine": "ruby",
+      "version": "3.4.11",
+      "abi": "3.4.0",
+      "architecture": "arm64",
+      "platform": "arm64-darwin27",
+      "library": "/opt/homebrew/Cellar/ruby@3.4/3.4.11_1/lib/libruby.3.4.dylib",
+      "path": "/opt/homebrew/Cellar/ruby@3.4/3.4.11_1/bin/ruby",
+      "sha256": "0c3bd94730d31355b506ac444db007edd345b4bf082526001392b9c50b50ea28",
+      "library_sha256": "d9213dd681b72ba2584404338befae2ccdc3f8a7b5791a77672ecf296903f88a"
+    },
+    "python": {
+      "version": "3.15.0",
+      "path": "/opt/homebrew/Cellar/python@3.15/3.15.0/Frameworks/Python.framework/Versions/3.15/bin/python3.15"
+    }
+  },
+  "executable": {
+    "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/debug/swiftpods",
+    "sha256": "f46e71f539126d2cb79e16fc12069f87a56187cccba810abe281395776c8580f"
+  },
+  "duration_seconds": 2125.862995958014,
+  "external_collection": {
+    "manifest_sha256": "52c0c216545dc49f286588a21059790312cacf91fd95008b0f79b9f28e282439",
+    "source_checkout_revision": {
+      "commit": "cc623010af913f5c81065b54ead07436b127ab7f",
+      "dirty": false
+    }
+  }
+}

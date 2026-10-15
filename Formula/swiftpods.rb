@@ -8,7 +8,7 @@ class Swiftpods < Formula
   depends_on arch: :arm64
   on_arm do
     url "https://github.com/swiftpods-org/swiftpods-release/releases/download/v0.1.0-dev/swiftpods-0.1.0-dev-macos-13.0-arm64.zip"
-    sha256 "8bdb6010684f4fc51818c293cc4bfbd42f73a709b251a466333e0daa597590d0"
+    sha256 "1ddbfead53db718164d9ba4cf833b15b317aa28070f5d2fb13b9817eab52ba3f"
   end
 
   def install

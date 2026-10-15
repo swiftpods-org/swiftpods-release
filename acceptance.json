@@ -4,7 +4,7 @@
   "reports": [
     {
       "report": "native-units.json",
-      "sha256": "bbe134615069a4980eb8d9e3cde7b2c543c7a558134da4b12ed9bb6480c4bccb",
+      "sha256": "b1f7becf61394f14bf51890922e2bdc928007c9a181729f0013329c869236b3d",
       "verified": [
         "Swift unit corpus with compiler warnings treated as errors"
       ],
@@ -12,7 +12,7 @@
     },
     {
       "report": "native-sources.json",
-      "sha256": "08ac0dc600e58ccd8184dd520d7f61326ae63f587a551393f9cae54fd584020f",
+      "sha256": "9cfc681fa55e01e2c82276c000726e5c2cefa8bc766cf92d24c7ba9d43bece41",
       "verified": [
         "local spec repository",
         "lazy CDN version index and podspec fetch",
@@ -34,8 +34,26 @@
       ]
     },
     {
+      "report": "native-runtime.json",
+      "sha256": "8765e8113c2ebf6384432bad1edf137a7c34bee7a6b41f810245e3c5a8a1ba58",
+      "verified": [
+        "SIGINT cancellation with Ruby and descendant SIGINT/SIGTERM traps",
+        "bounded child group cleanup and exit status 130",
+        "concurrent install rejection and rollback after cancellation",
+        "overlapping HTTP downloads with bounded pool",
+        "clean and preserve_paths source effects",
+        "lock_pod_sources permissions",
+        "preserve_pod_file_structure PBX hierarchy",
+        "incremental/offline/deployment installs avoid repeated prepare",
+        "clean-install bypass and explicit clean/lock opt-outs"
+      ],
+      "unverified": [
+        "cancellation during remote authenticated operations"
+      ]
+    },
+    {
       "report": "native-management.json",
-      "sha256": "527030696f0afdbecf29d0bcf9169a62f78d2fd3d528423e161b841bda3eee1c",
+      "sha256": "74606305f7e20519918d845bf413156dbc6486fc30ebb4bd2e8cdaa90b504472",
       "verified": [
         "Git CHECKOUT OPTIONS pin across fresh cache and upstream branch advance",
         "selected pod update and offline deployment",
@@ -55,26 +73,8 @@
       ]
     },
     {
-      "report": "native-runtime.json",
-      "sha256": "1b8d0de044a8fcb75bc9fc7de0e0a007e1bda1554a956a4e5d196e9599e5c6d2",
-      "verified": [
-        "SIGINT cancellation with Ruby and descendant SIGINT/SIGTERM traps",
-        "bounded child group cleanup and exit status 130",
-        "concurrent install rejection and rollback after cancellation",
-        "overlapping HTTP downloads with bounded pool",
-        "clean and preserve_paths source effects",
-        "lock_pod_sources permissions",
-        "preserve_pod_file_structure PBX hierarchy",
-        "incremental/offline/deployment installs avoid repeated prepare",
-        "clean-install bypass and explicit clean/lock opt-outs"
-      ],
-      "unverified": [
-        "cancellation during remote authenticated operations"
-      ]
-    },
-    {
       "report": "native-source-contract.json",
-      "sha256": "4865625dc61b75a9c23f990631d6d0bcc3bee5d5ca5f9882aaff361e075ecc00",
+      "sha256": "3261a40bfdc1947f30c599f19f9daa6c1bec285bbb8057ff53c1b27d4f57e195",
       "verified": [
         "external HTTP archive with authenticated headers and SHA-256",
         "external HTTP offline deployment and byte-preserved lockfile",
@@ -91,7 +91,7 @@
     },
     {
       "report": "native-compatibility.json",
-      "sha256": "b7cf4818a3c2074a6de9138c9b5e3427ed18ef866be23264b26e5199f786a1fa",
+      "sha256": "768116bbfb87395669532fcbfe67aa6facdc5d93fecf21f482b7df182d689963",
       "verified": [
         "locked spec repository preserved when an earlier source gains the same version",
         "unchanged version pin remains a constraint when a new dependency conflicts",
@@ -118,7 +118,7 @@
     },
     {
       "report": "native-ecosystem.json",
-      "sha256": "6642321a311f4174c5f437165ed9ac340bd4301e4b1277db77c8c9d750aa2f94",
+      "sha256": "0d9ccd406b10cf0e98016a0098deea7fea490b5dc54304cf9bd766bc2f1e97e3",
       "verified": [
         "CMake Xcode generation, integration, regeneration and two real application runs",
         "directory source pattern expansion in a real build",
@@ -137,7 +137,7 @@
     },
     {
       "report": "native-contract.json",
-      "sha256": "4e370735ec9f1549ac7213cddd9ee3fb3003d7fd6ba0e1c0763c485c5a4f03cc",
+      "sha256": "35ee5d1c559805a975467867c12a9fee165ace58817a8551a06bb98075618e11",
       "verified": [
         "implicit platform and project extension analysis",
         "Swift requirements affect actual compiled Swift language mode",
@@ -160,7 +160,7 @@
     },
     {
       "report": "native-variants.json",
-      "sha256": "7219d0105f5c733303b51bb2a4e09f651b92548b1ec625bd98b69d6978eddbe5",
+      "sha256": "dcb2444b89abdd6a1d55b5932914ece506a3f09980370c3b5cc85f20a09a8ced",
       "verified": [
         "six simultaneously built and executed macOS consumers",
         "five library variants and four transitive variants",
@@ -183,25 +183,8 @@
       ]
     },
     {
-      "report": "native-platforms.json",
-      "sha256": "f5424666705d805592a8319869bb39e274e799aad6e76f9cc3f5808b89a56a08",
-      "verified": [
-        "real dynamic XCFramework with ten platform/variant slices",
-        "three pod linkage modes built for macOS iOS tvOS watchOS visionOS and Mac Catalyst",
-        "watchOS arm64_32 binary inspected and linked",
-        "device/macOS/Mac Catalyst archives checked separately from simulator builds",
-        "required build macro consumed by compiled C source"
-      ],
-      "unverified": [
-        "physical device execution",
-        "signed archives",
-        "Swift binary module stability",
-        "test/app host matrices outside existing macOS/iOS fixtures"
-      ]
-    },
-    {
       "report": "native-configuration.json",
-      "sha256": "dc4a92bbe1f0c5c708d96a51f4b77dd0de031c95376cbdf5d4e026cd3133a1e0",
+      "sha256": "5db63ad1e80f5c19292158a50d9b256b8198c59981bbfc73d1d13ad619cb5090",
       "verified": [
         "configuration-filtered direct/localized/compiled resources and resource bundles",
         "dynamic library resource bundles remain inside the owning framework",
@@ -226,35 +209,25 @@
       ]
     },
     {
-      "report": "native-layout.json",
-      "sha256": "3fd8327b55dbc6b4bff77d2592734d22d9992c72e04a5434ae7fa8e4844b41b9",
+      "report": "native-platforms.json",
+      "sha256": "953739a4f94ea819a3a3727a4e440da470ddae440f01909906c39a2fb1057e5f",
       "verified": [
-        "isolated reachable project graphs",
-        "cross-project library/test/app/resource dependencies",
-        "main-project shared schemes resolve actual child containers",
-        "real macOS XCTest and app execution in three linkage modes",
-        "macOS generated/named unit test hosts",
-        "iOS named/generated UI host interaction and hosted unit tests",
-        "live child project and configuration identity",
-        "immediate saves and independent child root settings compile",
-        "public plugin subproject/all-project contexts",
-        "cross-project hook dependencies are idempotent",
-        "preserved original Xcode project in Git pod sources",
-        "byte-stable offline deployment reinstall",
-        "stale child/scheme/workspace cleanup preserves changed project files",
-        "hardened split-project UI execution without Ruby"
+        "real dynamic XCFramework with ten platform/variant slices",
+        "three pod linkage modes built for macOS iOS tvOS watchOS visionOS and Mac Catalyst",
+        "watchOS arm64_32 binary inspected and linked",
+        "device/macOS/Mac Catalyst archives checked separately from simulator builds",
+        "required build macro consumed by compiled C source"
       ],
       "unverified": [
-        "same-platform target variants",
-        "complete public/private plugin APIs",
-        "conditional SDK/consumer resources",
-        "physical devices and distribution signing",
-        "all platform/linkage combinations"
+        "physical device execution",
+        "signed archives",
+        "Swift binary module stability",
+        "test/app host matrices outside existing macOS/iOS fixtures"
       ]
     },
     {
       "report": "native-integration.json",
-      "sha256": "1df611a85c9ac82e2fae6854f2316cc9828eb223a26237957929cfd60783fc7d",
+      "sha256": "14545641d5b1754ec40749f88b5cef627dd74f5f5f4079a7c966ae0ce12a22d8",
       "verified": [
         "three native linkage variants build and run with resources and live hooks"
       ],
@@ -267,7 +240,7 @@
     },
     {
       "report": "native-batch.json",
-      "sha256": "1490f7ed6ef25566c5f208b9b2c1ca49cd86c0af514561ac760ef5b259fcf62b",
+      "sha256": "192cb1564754bed13cf1321a01d3bcfc159430a4fb222e133b727468cced1197",
       "verified": [
         "Debug/Staging/Release executable results in three linkage modes",
         "configuration-specific linking",
@@ -295,7 +268,7 @@
     },
     {
       "report": "native-script-phases.json",
-      "sha256": "c6bc06a078e4ad7d516650b70dd3d5728794fd51da1de921bbc60a27c9ef2b13",
+      "sha256": "245faa90f11d8c819c38c53e0968fec592a16d01822945652b453da534864f9f",
       "verified": [
         "podspec singular/plural, subspec and platform phases",
         "Podfile phases",
@@ -319,8 +292,50 @@
       ]
     },
     {
+      "report": "native-layout.json",
+      "sha256": "0235020b58f6583a5cb81cdb7e8b86cc31db4dcd23f58644f3a66cf5870d5ba6",
+      "verified": [
+        "isolated reachable project graphs",
+        "cross-project library/test/app/resource dependencies",
+        "main-project shared schemes resolve actual child containers",
+        "real macOS XCTest and app execution in three linkage modes",
+        "macOS generated/named unit test hosts",
+        "iOS named/generated UI host interaction and hosted unit tests",
+        "live child project and configuration identity",
+        "immediate saves and independent child root settings compile",
+        "public plugin subproject/all-project contexts",
+        "cross-project hook dependencies are idempotent",
+        "preserved original Xcode project in Git pod sources",
+        "byte-stable offline deployment reinstall",
+        "stale child/scheme/workspace cleanup preserves changed project files",
+        "hardened split-project UI execution without Ruby"
+      ],
+      "unverified": [
+        "same-platform target variants",
+        "complete public/private plugin APIs",
+        "conditional SDK/consumer resources",
+        "physical devices and distribution signing",
+        "all platform/linkage combinations"
+      ]
+    },
+    {
+      "report": "native-contract-reference.json",
+      "sha256": "7bcee8a774d8c6f11fa8465bb9f4bfb10396c79008c73bdbe5657212ceaccd5d",
+      "verified": [
+        "26 baseline Podfile methods",
+        "15 installation option values and defaults",
+        "53 complete attribute declarations and consumer values",
+        "singular aliases and per-platform setter restrictions",
+        "library/test inheritance and xcconfig conflict semantics",
+        "negative DSL types and options"
+      ],
+      "unverified": [
+        "all build effects for every attribute and platform"
+      ]
+    },
+    {
       "report": "native-vendor.json",
-      "sha256": "07d7bf969d793af9934d0ba9c5b34d64ce48043ad2f38bbb09a1686b33d1acef",
+      "sha256": "f536f533c20fe5fd4647fab74cec0e9917d080fdf7e8d4a94c66cd95fd7f746c",
       "verified": [
         "static/dynamic vendored frameworks and static libraries",
         "native XCFramework destination selection with distinct binary/header payloads",
@@ -342,48 +357,41 @@
       ]
     },
     {
-      "report": "native-supplementary.json",
-      "sha256": "dea98e63def0591e4e301fb26548372ebe9a50ef4c4a1767aebdb695dbf2884d",
+      "report": "native-reference.json",
+      "sha256": "954d7aaeef682da013d6da5b39ed14b4a7e8fde2c76f1bde53fcd66794cfcfd4",
       "verified": [
-        "explicit test/app selection and default exclusion",
-        "real macOS XCTest execution",
-        "standalone/generated/named unit tests execute in Debug/Release for all three linkage modes",
-        "app spec build and run",
-        "scoped source/resource/dependency isolation",
-        "resource bundles",
-        "generated schemes and Info.plist",
-        "scheme removal",
-        "test scheme environment",
-        "three library linkage modes",
-        "offline deployment reinstall",
-        "hardened JSON selection and XCTest without Ruby",
-        "unknown test type rejection before managed changes"
+        "independently executed engines",
+        "matching pod version",
+        "matching prepare/hook order",
+        "matching hook build settings",
+        "framework and resource-bundle generation"
       ],
       "unverified": [
-        "UI runners",
-        "other Apple platforms",
-        "signing",
-        "complete reference parity"
+        "byte-for-byte project/lock equivalence",
+        "complete DSL/API compatibility",
+        "reference matrix beyond this fixture"
       ]
     },
     {
-      "report": "native-contract-reference.json",
-      "sha256": "df4ca8afd7d41e6c0e06e55194196c27f4ead65a118980cc2ec1a2294968c671",
+      "report": "native-variant-reference.json",
+      "sha256": "b7ff0b4fe87b233f57fe3b44708db2f47516215260b63a9d9ca4e7c027b4b8f1",
       "verified": [
-        "26 baseline Podfile methods",
-        "15 installation option values and defaults",
-        "53 complete attribute declarations and consumer values",
-        "singular aliases and per-platform setter restrictions",
-        "library/test inheritance and xcconfig conflict semantics",
-        "negative DSL types and options"
+        "independent native and reference installs",
+        "matching five library and four transitive variants",
+        "matching exact target labels, selected source sets, library packaging, framework linkage and build minima",
+        "matching test/app spec variant scheme counts",
+        "matching pre-install variant counts and post-install build-setting preservation"
       ],
       "unverified": [
-        "all build effects for every attribute and platform"
+        "reference variant runtime execution; simultaneous reference XCFramework copies produce duplicate outputs",
+        "reference archive header isolation",
+        "identical project bytes",
+        "all platform/linkage combinations"
       ]
     },
     {
       "report": "native-compatibility-reference.json",
-      "sha256": "e6fffa2051a1dea14dd5ebf092d79a2ad2ec9a6226134de1c01a82a7bf8237af",
+      "sha256": "8be6144fb1a94a260b4d3346ad992dfac60cf8f7907e61d5f23af83fdd4db9fb",
       "verified": [
         "locked spec repository preserved when an earlier source gains the same version",
         "unchanged version pin remains a constraint when a new dependency conflicts",
@@ -409,41 +417,8 @@
       ]
     },
     {
-      "report": "native-reference.json",
-      "sha256": "b66022e6f3a63be3063ac09290bd80f25f0bb11b28d7fff1487a1b2b340836ae",
-      "verified": [
-        "independently executed engines",
-        "matching pod version",
-        "matching prepare/hook order",
-        "matching hook build settings",
-        "framework and resource-bundle generation"
-      ],
-      "unverified": [
-        "byte-for-byte project/lock equivalence",
-        "complete DSL/API compatibility",
-        "reference matrix beyond this fixture"
-      ]
-    },
-    {
-      "report": "native-variant-reference.json",
-      "sha256": "b35b550e809dfd30d3e218ebb44f2f43348a0d2c0ee15431f791f7ebc253c033",
-      "verified": [
-        "independent native and reference installs",
-        "matching five library and four transitive variants",
-        "matching exact target labels, selected source sets, library packaging, framework linkage and build minima",
-        "matching test/app spec variant scheme counts",
-        "matching pre-install variant counts and post-install build-setting preservation"
-      ],
-      "unverified": [
-        "reference variant runtime execution; simultaneous reference XCFramework copies produce duplicate outputs",
-        "reference archive header isolation",
-        "identical project bytes",
-        "all platform/linkage combinations"
-      ]
-    },
-    {
       "report": "native-ecosystem-reference.json",
-      "sha256": "115e36597c05ad3d532966ed7f09efdb8314c29e26be9bf9fa2f2284abf7f94d",
+      "sha256": "726af8f33cd81ceaeca390b717703b098d1c5187535bfb1738f7ab9360aa0b01",
       "verified": [
         "CMake Xcode generation, integration, regeneration and two real application runs",
         "directory source pattern expansion in a real build",
@@ -467,7 +442,7 @@
     },
     {
       "report": "native-script-reference.json",
-      "sha256": "57e792d37202f7caa1d2315564efb01646bb2d6423ab41a51760752898d647cb",
+      "sha256": "ca75705e674f25209a4970d9fc32252d7cb91f2fde5d85d99db935d1a42fc630",
       "verified": [
         "independent native/reference script phase generation",
         "matching pod/Podfile phase order and options",
@@ -483,7 +458,7 @@
     },
     {
       "report": "native-supplementary-reference.json",
-      "sha256": "1344cc3039d6810769494b75212826b090c5aee9b2f54930097445d039945dcb",
+      "sha256": "607e7a371fbb5f7145bada4fa674e4d9853a49a08ac94187185852702f04aae0",
       "verified": [
         "independent native/reference test/app selection",
         "matching resolved names and product types",
@@ -500,8 +475,215 @@
       ]
     },
     {
+      "report": "native-batch-reference.json",
+      "sha256": "960f07bfb8bbe0206ebacab0d50a12679fd75fc366ffc13aa918856a2ee89bb9",
+      "verified": [
+        "same Debug/Staging/Release executable results in independent engines",
+        "complete/search_paths/none inheritance",
+        "nested inheritance declarations match reference analysis including none after search_paths",
+        "matching per-file ARC, prefix header and localized resource behavior",
+        "multiple pod projects",
+        "live project hooks and immediate saves",
+        "Installer and Project identity",
+        "lockfile lifecycle"
+      ],
+      "unverified": [
+        "project/lock byte parity",
+        "all plugin APIs",
+        "multi-platform reference matrix",
+        "conditional SDK and consumer resources"
+      ]
+    },
+    {
+      "report": "native-supplementary.json",
+      "sha256": "2501143ed73946e49f96d44e3bd4ae5dfd8d76aeae3db41071b04394b5125c65",
+      "verified": [
+        "explicit test/app selection and default exclusion",
+        "real macOS XCTest execution",
+        "standalone/generated/named unit tests execute in Debug/Release for all three linkage modes",
+        "app spec build and run",
+        "scoped source/resource/dependency isolation",
+        "resource bundles",
+        "generated schemes and Info.plist",
+        "scheme removal",
+        "test scheme environment",
+        "three library linkage modes",
+        "offline deployment reinstall",
+        "hardened JSON selection and XCTest without Ruby",
+        "unknown test type rejection before managed changes"
+      ],
+      "unverified": [
+        "UI runners",
+        "other Apple platforms",
+        "signing",
+        "complete reference parity"
+      ]
+    },
+    {
+      "report": "native-ui-reference.json",
+      "sha256": "6ba570c3b5a361e37ab829f79ab2bbbcc0c1f0b0df7896da9d8dce42707ec30c",
+      "verified": [
+        "independent UI product types and host associations match",
+        "UI XCTest launches app spec and taps button in both engines",
+        "matching library value changes from 7 to 8",
+        "Swift UI tests and app specs",
+        "own UI resources and Info.plist",
+        "UI scheme environment"
+      ],
+      "unverified": [
+        "exact Xcode project bytes",
+        "generated host implementation parity",
+        "other platforms",
+        "complete DSL/API parity"
+      ]
+    },
+    {
+      "report": "native-mercurial.json",
+      "sha256": "e7fd7428a5f15f57fe9bfffb17978f1996880bdc6eafd9e66667339f9dee3aad",
+      "verified": [
+        "actual Mercurial repository and full revision pin",
+        "advanced upstream head remains pinned across a fresh cache",
+        "selected update installs the new revision and version",
+        "offline deployment preserves lock bytes",
+        "source snapshot cache integrity"
+      ],
+      "unverified": [
+        "authenticated remote Mercurial transport"
+      ]
+    },
+    {
+      "report": "native-layout-reference.json",
+      "sha256": "ee3f0502d7e856c96de1a98052e34bc5f77fd8076e1576e38c0d012f1f0c2fb9",
+      "verified": [
+        "project target ownership and child scheme containers match reference",
+        "independent child root build settings affect real compilation",
+        "live Installer/child project/configuration identity and immediate saves",
+        "public install context project lists",
+        "matching idempotent cross-project hook dependencies",
+        "original source projects preserved through preserve_paths",
+        "matching macOS XCTest and app resource/dependency results",
+        "matching named-host iOS UI interaction through split projects"
+      ],
+      "unverified": [
+        "exact project bytes",
+        "all plugin APIs",
+        "all platform/linkage combinations",
+        "distribution signing and physical devices"
+      ]
+    },
+    {
+      "report": "native-benchmarks.json",
+      "sha256": "286b74836ea756d038772ad5d32852e953641bb051a75a8090d2201f4e66bdd5",
+      "verified": [
+        "cold/warm/no-op/targeted-update timings on a fixed local fixture",
+        "targeted update preserves unrelated lock",
+        "build input bytes and modification times are measured",
+        "no-op preserves all measured build input bytes and timestamps"
+      ],
+      "unverified": [
+        "public network performance",
+        "real application install performance",
+        "comparison with another manager"
+      ]
+    },
+    {
+      "report": "native-resolver-reference.json",
+      "sha256": "01ca86f8a9e032a2e4934d68cf1c3b3919e5b065c58e0b4dd3d8c95d87d8d04e",
+      "verified": [
+        "32 deterministic generated graphs and four cycle/backtracking graphs resolved independently in both engines",
+        "same chosen root versions and dependency closure",
+        "same conflict outcomes",
+        "root requirement ordering and transitive version constraints",
+        "cycles across roots and default subspecs rejected; acyclic version fallback retained"
+      ],
+      "unverified": [
+        "exhaustive graph space",
+        "remote repository transport",
+        "exact cycle diagnostic text: reference internal ArgumentError on the merged cycle is retained in reference.log"
+      ]
+    },
+    {
+      "report": "native-acceptance-harness.json",
+      "sha256": "7964dca0e17c30ddb2d90b652a226c539a19733af37b0792076e2b1387c891eb",
+      "verified": [
+        "missing, failed and skipped evidence rejected",
+        "stale source, contract and toolchain rejected",
+        "replaced executable rejected",
+        "external artifact hash checked",
+        "unverified external gates and dirty revisions cannot establish stable acceptance"
+      ],
+      "unverified": []
+    },
+    {
+      "report": "native-xcconfig.json",
+      "sha256": "3c35e9b03cdf37ed86187572872b156e349a867763724ee3908951b1fb27738c",
+      "verified": [
+        "explicit project outside installation directory",
+        "xcconfig paths resolved relative to PBX groups",
+        "existing user base configuration and optional aggregate include retained",
+        "conditional sdk/configuration settings consumed by Debug/Release applications",
+        "inherited definitions from user include-chain preserved",
+        "hook resolved_build_setting reads the included SDKROOT",
+        "external project deintegration preserves user base configuration"
+      ],
+      "unverified": [
+        "all xcconfig conditional axes and substitution operators"
+      ]
+    },
+    {
+      "report": "native-configuration-reference.json",
+      "sha256": "b0db9b3159b31329905400a62b74a0dd3def35e050d0b83e7f2025e7e4552934",
+      "verified": [
+        "matching Debug/Staging/Release macOS app execution",
+        "matching direct/localized/compiled resources and resource bundles",
+        "matching conditional SDK link and embed behavior",
+        "static XCFramework and dynamic raw-framework pod modes",
+        "matching enabled/disabled iOS simulator app results",
+        "multiple pod projects",
+        "resource and SDK paths with spaces",
+        "unrelated user resource preservation"
+      ],
+      "unverified": [
+        "exact project bytes",
+        "reference incremental script scheduling; fixture marks copy/embed scripts always run",
+        "all resource formats",
+        "all platform/linkage combinations",
+        "physical devices and distribution signing"
+      ]
+    },
+    {
+      "report": "native-xcconfig-reference.json",
+      "sha256": "2f477c3271e73fa81f0e8a57536ac379987f253c7884d40d364a68a02f9d8250",
+      "verified": [
+        "explicit project outside installation directory",
+        "xcconfig paths resolved relative to PBX groups",
+        "existing user base configuration and optional aggregate include retained",
+        "conditional sdk/configuration settings consumed by Debug/Release applications",
+        "inherited definitions from user include-chain preserved",
+        "hook resolved_build_setting reads the included SDKROOT",
+        "external project deintegration preserves user base configuration"
+      ],
+      "unverified": [
+        "all xcconfig conditional axes and substitution operators"
+      ]
+    },
+    {
+      "report": "native-swift-binary.json",
+      "sha256": "fca94a9c807ebc7af32be4ca35302847b29557febcce3512305de024702799e8",
+      "verified": [
+        "real dynamic Swift framework with library evolution enabled",
+        "serialized swiftmodule and private interfaces removed before consumption",
+        "public swiftinterface consumed by an actual Swift application",
+        "binary SDK linked and embedded across three pod linkage modes",
+        "Debug/Release applications execute and return the SDK value"
+      ],
+      "unverified": [
+        "cross-compiler module stability; producer and consumer use the same toolchain"
+      ]
+    },
+    {
       "report": "native-ui.json",
-      "sha256": "73cf53fa14e23fc09edc123bb3492ed26b25e2827a5baaf46981324c90517d81",
+      "sha256": "53d08e0535d0bd3c83ed902c60b840ab2f54d9354cd2e86e80859dc8428db2ee",
       "verified": [
         "iOS simulator UI runner launches a named app spec and taps its button",
         "named/generated UI hosts and standalone/hosted unit tests execute in Debug/Release in every selected linkage mode",
@@ -525,190 +707,8 @@
       ]
     },
     {
-      "report": "native-batch-reference.json",
-      "sha256": "bc7fbde4aa6bd2455a18a08e6cb6d6b00056357425fd2d82088428cb5456b94e",
-      "verified": [
-        "same Debug/Staging/Release executable results in independent engines",
-        "complete/search_paths/none inheritance",
-        "nested inheritance declarations match reference analysis including none after search_paths",
-        "matching per-file ARC, prefix header and localized resource behavior",
-        "multiple pod projects",
-        "live project hooks and immediate saves",
-        "Installer and Project identity",
-        "lockfile lifecycle"
-      ],
-      "unverified": [
-        "project/lock byte parity",
-        "all plugin APIs",
-        "multi-platform reference matrix",
-        "conditional SDK and consumer resources"
-      ]
-    },
-    {
-      "report": "native-layout-reference.json",
-      "sha256": "1f7f8e08ff0ab63518c4e417871d9d68204ed6c3e7cb1045e5e74a14ffc4e1e9",
-      "verified": [
-        "project target ownership and child scheme containers match reference",
-        "independent child root build settings affect real compilation",
-        "live Installer/child project/configuration identity and immediate saves",
-        "public install context project lists",
-        "matching idempotent cross-project hook dependencies",
-        "original source projects preserved through preserve_paths",
-        "matching macOS XCTest and app resource/dependency results",
-        "matching named-host iOS UI interaction through split projects"
-      ],
-      "unverified": [
-        "exact project bytes",
-        "all plugin APIs",
-        "all platform/linkage combinations",
-        "distribution signing and physical devices"
-      ]
-    },
-    {
-      "report": "native-configuration-reference.json",
-      "sha256": "910f0d6ae3d89685c42298a0147328f7f1eccb3148a31ce4ada796c4eab68516",
-      "verified": [
-        "matching Debug/Staging/Release macOS app execution",
-        "matching direct/localized/compiled resources and resource bundles",
-        "matching conditional SDK link and embed behavior",
-        "static XCFramework and dynamic raw-framework pod modes",
-        "matching enabled/disabled iOS simulator app results",
-        "multiple pod projects",
-        "resource and SDK paths with spaces",
-        "unrelated user resource preservation"
-      ],
-      "unverified": [
-        "exact project bytes",
-        "reference incremental script scheduling; fixture marks copy/embed scripts always run",
-        "all resource formats",
-        "all platform/linkage combinations",
-        "physical devices and distribution signing"
-      ]
-    },
-    {
-      "report": "native-mercurial.json",
-      "sha256": "a289dfce3171b5ba6cda5ee7b80abc179dad7e3bddf2487e439e5acaad14233f",
-      "verified": [
-        "actual Mercurial repository and full revision pin",
-        "advanced upstream head remains pinned across a fresh cache",
-        "selected update installs the new revision and version",
-        "offline deployment preserves lock bytes",
-        "source snapshot cache integrity"
-      ],
-      "unverified": [
-        "authenticated remote Mercurial transport"
-      ]
-    },
-    {
-      "report": "native-benchmarks.json",
-      "sha256": "7dd93409b67036a3aa38a9be7e6118dd84ae5e7c278d98ce4d1fb596a851a057",
-      "verified": [
-        "cold/warm/no-op/targeted-update timings on a fixed local fixture",
-        "targeted update preserves unrelated lock",
-        "build input bytes and modification times are measured",
-        "no-op preserves all measured build input bytes and timestamps"
-      ],
-      "unverified": [
-        "public network performance",
-        "real application install performance",
-        "comparison with another manager"
-      ]
-    },
-    {
-      "report": "native-resolver-reference.json",
-      "sha256": "9d3a0a3d5a8f911c0e01a30f95cb8a1167629332f95e09374b1498d95113659c",
-      "verified": [
-        "32 deterministic generated graphs and four cycle/backtracking graphs resolved independently in both engines",
-        "same chosen root versions and dependency closure",
-        "same conflict outcomes",
-        "root requirement ordering and transitive version constraints",
-        "cycles across roots and default subspecs rejected; acyclic version fallback retained"
-      ],
-      "unverified": [
-        "exhaustive graph space",
-        "remote repository transport",
-        "exact cycle diagnostic text: reference internal ArgumentError on the merged cycle is retained in reference.log"
-      ]
-    },
-    {
-      "report": "native-ui-reference.json",
-      "sha256": "b823c667d6398e949a9735a3dadc7ead19df141221aeb6b7cba9c89a5cf9cb84",
-      "verified": [
-        "independent UI product types and host associations match",
-        "UI XCTest launches app spec and taps button in both engines",
-        "matching library value changes from 7 to 8",
-        "Swift UI tests and app specs",
-        "own UI resources and Info.plist",
-        "UI scheme environment"
-      ],
-      "unverified": [
-        "exact Xcode project bytes",
-        "generated host implementation parity",
-        "other platforms",
-        "complete DSL/API parity"
-      ]
-    },
-    {
-      "report": "native-acceptance-harness.json",
-      "sha256": "d30383e756f40d63f0ed9ceb9df7b35f8c8bd9be067923996fc27866ff339e41",
-      "verified": [
-        "missing, failed and skipped evidence rejected",
-        "stale source, contract and toolchain rejected",
-        "replaced executable rejected",
-        "external artifact hash checked",
-        "unverified external gates and dirty revisions cannot establish stable acceptance"
-      ],
-      "unverified": []
-    },
-    {
-      "report": "native-swift-binary.json",
-      "sha256": "a9bca194aa4f71b6a9f1741b0377fe421140df36efda3bed5522c0e0a6d90633",
-      "verified": [
-        "real dynamic Swift framework with library evolution enabled",
-        "serialized swiftmodule and private interfaces removed before consumption",
-        "public swiftinterface consumed by an actual Swift application",
-        "binary SDK linked and embedded across three pod linkage modes",
-        "Debug/Release applications execute and return the SDK value"
-      ],
-      "unverified": [
-        "cross-compiler module stability; producer and consumer use the same toolchain"
-      ]
-    },
-    {
-      "report": "native-xcconfig.json",
-      "sha256": "fc892fe3873136af06a0f9eb02e62d4fce1b0a2f1de157ca91b283341bf85c09",
-      "verified": [
-        "explicit project outside installation directory",
-        "xcconfig paths resolved relative to PBX groups",
-        "existing user base configuration and optional aggregate include retained",
-        "conditional sdk/configuration settings consumed by Debug/Release applications",
-        "inherited definitions from user include-chain preserved",
-        "hook resolved_build_setting reads the included SDKROOT",
-        "external project deintegration preserves user base configuration"
-      ],
-      "unverified": [
-        "all xcconfig conditional axes and substitution operators"
-      ]
-    },
-    {
-      "report": "native-xcconfig-reference.json",
-      "sha256": "f3554a1ea9fe091bd2dc2fc23084b5998f680938da2460e88e0072a98b4f5098",
-      "verified": [
-        "explicit project outside installation directory",
-        "xcconfig paths resolved relative to PBX groups",
-        "existing user base configuration and optional aggregate include retained",
-        "conditional sdk/configuration settings consumed by Debug/Release applications",
-        "inherited definitions from user include-chain preserved",
-        "hook resolved_build_setting reads the included SDKROOT",
-        "external project deintegration preserves user base configuration"
-      ],
-      "unverified": [
-        "all xcconfig conditional axes and substitution operators"
-      ]
-    },
-    {
       "report": "native-host-platforms.json",
-      "sha256": "ca1d6a82866d0880c78753339832d2143c24dbfb8a2138b1c65006bd922bcc1e",
+      "sha256": "cde71845c8b3a9398cb843f3cc06c900eeda64e460731a03b984eee576b62f8f",
       "verified": [
         "real app, standalone/generated/named unit targets and generated/named UI runners build for the explicitly listed SDK configurations"
       ],
@@ -722,7 +722,7 @@
     },
     {
       "report": "native-distribution.json",
-      "sha256": "219a4cf4ac8133e543539f51772d039d66144a6c76a1b1166f5d3222a773a0cf",
+      "sha256": "d98340c57dd56e1705dc99ada4dd01c8bf7e1def740d235170b464a11eafebe8",
       "verified": [
         "runtime inventory excludes reference engine/gems",
         "relocation",
@@ -743,7 +743,7 @@
     },
     {
       "report": "native-packaged-variants.json",
-      "sha256": "8f624f81c4e678e2643477646fece219faf7e0441a36d6962f05e0618a8cdcf4",
+      "sha256": "a47317dbab22e5a532b2cfd7f935c0e31da8d6eebf7267d37420c691a8f0ec74",
       "verified": [
         "six simultaneously built and executed macOS consumers",
         "five library variants and four transitive variants",
@@ -767,7 +767,7 @@
     },
     {
       "report": "native-packaged-configuration.json",
-      "sha256": "7e468a59bcc729bb09be3448a174a324b05c6ebf3a756e76327e2febf1e6eae3",
+      "sha256": "7bc6c3dfab9eab13faadeb92b7fb2050ee779248fbd7be12781192b62da6c07f",
       "verified": [
         "configuration-filtered direct/localized/compiled resources and resource bundles",
         "dynamic library resource bundles remain inside the owning framework",
@@ -793,7 +793,7 @@
     },
     {
       "report": "native-packaged-layout.json",
-      "sha256": "66c655a586dd10f888a1f467eb52ac1b3fe466328dd7e8661ac15f6eba81158b",
+      "sha256": "58bccfcd6c05263f89e3b1d326c0090187422b8cff2458ac9bb07fb91bf36281",
       "verified": [
         "isolated reachable project graphs",
         "cross-project library/test/app/resource dependencies",
@@ -820,7 +820,7 @@
     },
     {
       "report": "native-packaged-ui.json",
-      "sha256": "a8ccc3f3e41dcad941aeebb6bc2279329b5bf00f104802700a7ebac651ec1bca",
+      "sha256": "3da498ac65202ae90286e3c7f65ee76eb5721407d36cab53e9359fa647166752",
       "verified": [
         "iOS simulator UI runner launches a named app spec and taps its button",
         "named/generated UI hosts and standalone/hosted unit tests execute in Debug/Release in every selected linkage mode",
@@ -2871,37 +2871,37 @@
       "scope": "macOS arm64: Swift 6.1.3 producer to Swift 6.4 consumer, public interfaces only, three linkage modes, Debug/Release, six actual application executions",
       "evidence": [
         {
-          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-20261015/test-results/native-swift-binary.json",
-          "sha256": "7fd9a64dc82bb3aa14deb65bcb41505d124b715cde14cfec74f11c9624a691d4",
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-release-20261015/test-results/native-swift-binary.json",
+          "sha256": "f0da88d35e5d220c36c043b86e945f96498c02c31f560dbd7a5f23baec612595",
           "archive_path": "external/swift_binary_module_stability/0-native-swift-binary.json"
         },
         {
-          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-20261015/test-results/cross-compiler.log",
-          "sha256": "7fc338f008d4c188a03849a985d909a8ed5205e944eb8dd8bccca78b76d8524f",
-          "archive_path": "external/swift_binary_module_stability/1-cross-compiler.log"
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-release-20261015/test-results/cross-compiler-final.log",
+          "sha256": "58b3655d8e12d38f451a2edba67634db53d3e4df8a840a7e4026dd092b0a3ad7",
+          "archive_path": "external/swift_binary_module_stability/1-cross-compiler-final.log"
         },
         {
-          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/cross-toolchain/producer-6.1.3/producer.json",
-          "sha256": "f1a55c4ae2d26fe6c61d2011414aed22d2e202a5f56c5b39081edfe3ab962807",
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/final-cross-toolchain/producer-6.1.3/producer.json",
+          "sha256": "e7141c0d500a9b1a4268150f324d994d383ec6a07765c292c7d094e8d81e3ece",
           "archive_path": "external/swift_binary_module_stability/2-producer.json"
         },
         {
-          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/cross-toolchain/producer-6.1.3/producer.log",
-          "sha256": "0beeeda341158c75346ef3503ecc7e7c409139002b61e1d859484aca2855e0c4",
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/final-cross-toolchain/producer-6.1.3/producer.log",
+          "sha256": "a25fc3a291244fad25a842522a07a2965ddc2c96f477a6fa59b4b31cb5a10e2f",
           "archive_path": "external/swift_binary_module_stability/3-producer.log"
         },
         {
-          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/cross-toolchain/producer-6.1.3/SDK.swift",
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/final-cross-toolchain/producer-6.1.3/SDK.swift",
           "sha256": "caedf51b94066f48b9e12f6012e0c2c55a44f5a67e89461687c863f0eb74f3be",
           "archive_path": "external/swift_binary_module_stability/4-SDK.swift"
         },
         {
-          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/cross-toolchain/produce-independent.py",
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/final-cross-toolchain/produce-independent.py",
           "sha256": "36c6c24629951e3acee62ab03b8a65ee3d3cf6c74e20b21ba10bd3bb0184bdf4",
           "archive_path": "external/swift_binary_module_stability/5-produce-independent.py"
         },
         {
-          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/cross-toolchain/provenance.json",
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/final-cross-toolchain/provenance.json",
           "sha256": "8eca3cf2520920ae255b6f7bf25c8369be70d07511e86b930aa7535883494b57",
           "archive_path": "external/swift_binary_module_stability/6-provenance.json"
         },
@@ -2911,42 +2911,42 @@
           "archive_path": "external/swift_binary_module_stability/7-signature.log"
         },
         {
-          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-20261015/.build/native-swift-binary-t5suqz53/dynamic-Debug.log",
-          "sha256": "1cb166b7f9687e0bf12bf073d35e764a1d46bb2a446a232b7f10447cd9b0fb5a",
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-release-20261015/.build/native-swift-binary-kykhg49c/dynamic-Debug.log",
+          "sha256": "2ef8bc90b2127e8df9d351223b0a4e50e041f6e6f81cb91ed3a73e79e4c31d68",
           "archive_path": "external/swift_binary_module_stability/8-dynamic-Debug.log"
         },
         {
-          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-20261015/.build/native-swift-binary-t5suqz53/dynamic-Release.log",
-          "sha256": "49dc8544ed5b32a654986ff7e67334dc62145bc992b9f39f6bd0130f53c823b0",
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-release-20261015/.build/native-swift-binary-kykhg49c/dynamic-Release.log",
+          "sha256": "9a11c3bd8fffd0d79279ea11681937a0d79665f3c7abeb21fabd7531d5bd872c",
           "archive_path": "external/swift_binary_module_stability/9-dynamic-Release.log"
         },
         {
-          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-20261015/.build/native-swift-binary-t5suqz53/library-Debug.log",
-          "sha256": "eb3bdbcbd20c82c1f2336d88e3ebc46ac11b8c9299c709aaaff100af586f59c2",
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-release-20261015/.build/native-swift-binary-kykhg49c/library-Debug.log",
+          "sha256": "83e0994a21f72378321f3bdd618cebacb065ad531e0f09ab40b6c14cc7a9c963",
           "archive_path": "external/swift_binary_module_stability/10-library-Debug.log"
         },
         {
-          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-20261015/.build/native-swift-binary-t5suqz53/library-Release.log",
-          "sha256": "8b99d862afc6331509f60cae244e0d1987c7eef2cdfdc7c3da672972314edd81",
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-release-20261015/.build/native-swift-binary-kykhg49c/library-Release.log",
+          "sha256": "2921042554f6739905227389da52d17240b85d0477841b1c1a493bd03ce882a9",
           "archive_path": "external/swift_binary_module_stability/11-library-Release.log"
         },
         {
-          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-20261015/.build/native-swift-binary-t5suqz53/static-Debug.log",
-          "sha256": "7304824bb5ea8231445d68d4696e73a53814fe048b3ac3fe90a9c55342e630cd",
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-release-20261015/.build/native-swift-binary-kykhg49c/static-Debug.log",
+          "sha256": "2c3461b4ca52be11fa0cebde43c7e5b9d1e6e1d942cc19e834abcf1d252f86e2",
           "archive_path": "external/swift_binary_module_stability/12-static-Debug.log"
         },
         {
-          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-20261015/.build/native-swift-binary-t5suqz53/static-Release.log",
-          "sha256": "6b6d6b7025e12276279ab5105328f30aa9feb0c394aadc786fe6ff7b26b598b2",
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/cross-compiler-release-20261015/.build/native-swift-binary-kykhg49c/static-Release.log",
+          "sha256": "c3e22634f800ab9c902de1718e32c60966772f0eabf6bd0b6c7b173af7631fe0",
           "archive_path": "external/swift_binary_module_stability/13-static-Release.log"
         },
         {
-          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/cross-toolchain/producer-6.1.3/SwiftBinaryKit.framework/Versions/A/Modules/SwiftBinaryKit.swiftmodule/arm64-apple-macos.swiftinterface",
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/final-cross-toolchain/producer-6.1.3/SwiftBinaryKit.framework/Versions/A/Modules/SwiftBinaryKit.swiftmodule/arm64-apple-macos.swiftinterface",
           "sha256": "37bd361f19e35c78e38ffa7129c6d62065087c9518e5cecc57f0c2f66d9c0a3a",
           "archive_path": "external/swift_binary_module_stability/14-arm64-apple-macos.swiftinterface"
         },
         {
-          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/cross-toolchain/producer-6.1.3/SwiftBinaryKit.framework/Versions/A/SwiftBinaryKit",
+          "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/final-cross-toolchain/producer-6.1.3/SwiftBinaryKit.framework/Versions/A/SwiftBinaryKit",
           "sha256": "3913e7bb3f09cfcabec4878b2d6abd351e40f6b65344fd6c71e43709d8e23bc5",
           "archive_path": "external/swift_binary_module_stability/15-SwiftBinaryKit"
         }
@@ -2961,7 +2961,7 @@
   },
   "stable_acceptance": "not_established",
   "source_revision": {
-    "commit": "cc623010af913f5c81065b54ead07436b127ab7f",
+    "commit": "8ccd3dd0c21e96ede804261a8b70fd0dab2eea7f",
     "dirty": false
   },
   "compatibility_differences": [
@@ -3010,7 +3010,7 @@
     }
   },
   "coverage_policy": "A mapped report is evidence for its recorded cases, not proof of every combination. Stable acceptance also requires all external gates and a clean source revision.",
-  "swift_unit_tests": 89,
+  "swift_unit_tests": 92,
   "stages": [
     {
       "command": [
@@ -3018,7 +3018,7 @@
         "scripts/bootstrap.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-0.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-0.log"
     },
     {
       "command": [
@@ -3026,17 +3026,17 @@
         "scripts/unit_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-1.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-1.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/prepare_reference.py",
         "--gem-home",
-        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+        ".build/previous-runtime/_nw_ef94/gems"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-2.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-2.log"
     },
     {
       "command": [
@@ -3044,7 +3044,7 @@
         "scripts/native_sources_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-3.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-3.log"
     },
     {
       "command": [
@@ -3052,7 +3052,7 @@
         "scripts/native_management_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-4.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-4.log"
     },
     {
       "command": [
@@ -3060,7 +3060,7 @@
         "scripts/native_runtime_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-5.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-5.log"
     },
     {
       "command": [
@@ -3068,7 +3068,7 @@
         "scripts/native_source_contract_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-6.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-6.log"
     },
     {
       "command": [
@@ -3076,7 +3076,7 @@
         "scripts/native_compatibility_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-7.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-7.log"
     },
     {
       "command": [
@@ -3084,7 +3084,7 @@
         "scripts/native_contract_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-8.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-8.log"
     },
     {
       "command": [
@@ -3092,7 +3092,7 @@
         "scripts/native_ecosystem_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-9.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-9.log"
     },
     {
       "command": [
@@ -3100,7 +3100,7 @@
         "scripts/native_platform_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-10.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-10.log"
     },
     {
       "command": [
@@ -3108,7 +3108,7 @@
         "scripts/native_variant_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-11.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-11.log"
     },
     {
       "command": [
@@ -3116,7 +3116,7 @@
         "scripts/native_configuration_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-12.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-12.log"
     },
     {
       "command": [
@@ -3124,7 +3124,7 @@
         "scripts/native_layout_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-13.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-13.log"
     },
     {
       "command": [
@@ -3132,7 +3132,7 @@
         "scripts/native_batch_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-14.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-14.log"
     },
     {
       "command": [
@@ -3140,7 +3140,7 @@
         "scripts/native_integration.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-15.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-15.log"
     },
     {
       "command": [
@@ -3148,7 +3148,7 @@
         "scripts/native_vendor_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-16.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-16.log"
     },
     {
       "command": [
@@ -3156,7 +3156,7 @@
         "scripts/native_script_phase_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-17.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-17.log"
     },
     {
       "command": [
@@ -3164,7 +3164,7 @@
         "scripts/native_supplementary_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-18.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-18.log"
     },
     {
       "command": [
@@ -3172,117 +3172,117 @@
         "scripts/native_ui_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-19.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-19.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/contract_reference.py",
         "--gem-home",
-        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+        ".build/previous-runtime/_nw_ef94/gems"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-20.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-20.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/native_compatibility_tests.py",
         "--gem-home",
-        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+        ".build/previous-runtime/_nw_ef94/gems"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-21.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-21.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/reference_compare.py",
         "--gem-home",
-        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+        ".build/previous-runtime/_nw_ef94/gems"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-22.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-22.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/variant_reference.py",
         "--gem-home",
-        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+        ".build/previous-runtime/_nw_ef94/gems"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-23.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-23.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/native_ecosystem_tests.py",
         "--gem-home",
-        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+        ".build/previous-runtime/_nw_ef94/gems"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-24.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-24.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/script_phase_reference.py",
         "--gem-home",
-        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+        ".build/previous-runtime/_nw_ef94/gems"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-25.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-25.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/supplementary_reference.py",
         "--gem-home",
-        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+        ".build/previous-runtime/_nw_ef94/gems"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-26.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-26.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/batch_reference.py",
         "--gem-home",
-        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+        ".build/previous-runtime/_nw_ef94/gems"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-27.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-27.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/configuration_reference.py",
         "--gem-home",
-        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+        ".build/previous-runtime/_nw_ef94/gems"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-28.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-28.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/layout_reference.py",
         "--gem-home",
-        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+        ".build/previous-runtime/_nw_ef94/gems"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-29.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-29.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/ui_reference.py",
         "--gem-home",
-        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+        ".build/previous-runtime/_nw_ef94/gems"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-30.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-30.log"
     },
     {
       "command": [
@@ -3290,7 +3290,7 @@
         "scripts/native_mercurial_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-31.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-31.log"
     },
     {
       "command": [
@@ -3298,17 +3298,17 @@
         "scripts/native_benchmarks.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-32.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-32.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/resolver_reference.py",
         "--gem-home",
-        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+        ".build/previous-runtime/_nw_ef94/gems"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-33.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-33.log"
     },
     {
       "command": [
@@ -3316,7 +3316,7 @@
         "scripts/native_swift_binary_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-34.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-34.log"
     },
     {
       "command": [
@@ -3324,7 +3324,7 @@
         "scripts/acceptance_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-35.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-35.log"
     },
     {
       "command": [
@@ -3332,17 +3332,17 @@
         "scripts/native_xcconfig_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-36.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-36.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/native_xcconfig_tests.py",
         "--gem-home",
-        "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems"
+        ".build/previous-runtime/_nw_ef94/gems"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-37.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-37.log"
     },
     {
       "command": [
@@ -3350,66 +3350,66 @@
         "scripts/native_host_platform_tests.py"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-38.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-38.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/package.py",
         "--destination",
-        "dist/SwiftPods-0.1.0-dev-readiness"
+        "dist/SwiftPods-0.1.0-dev-final-complete"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-39.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-39.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/native_distribution_tests.py",
-        "dist/SwiftPods-0.1.0-dev-readiness"
+        "dist/SwiftPods-0.1.0-dev-final-complete"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-40.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-40.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/native_variant_tests.py",
         "--bundle",
-        "dist/SwiftPods-0.1.0-dev-readiness"
+        "dist/SwiftPods-0.1.0-dev-final-complete"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-41.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-41.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/native_configuration_tests.py",
         "--bundle",
-        "dist/SwiftPods-0.1.0-dev-readiness"
+        "dist/SwiftPods-0.1.0-dev-final-complete"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-42.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-42.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/native_layout_tests.py",
         "--bundle",
-        "dist/SwiftPods-0.1.0-dev-readiness"
+        "dist/SwiftPods-0.1.0-dev-final-complete"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-43.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-43.log"
     },
     {
       "command": [
         "/opt/homebrew/opt/python@3.15/bin/python3.15",
         "scripts/native_ui_tests.py",
         "--bundle",
-        "dist/SwiftPods-0.1.0-dev-readiness"
+        "dist/SwiftPods-0.1.0-dev-final-complete"
       ],
       "exit_status": 0,
-      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/test-results/native-check-44.log"
+      "log": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/test-results/native-check-44.log"
     }
   ],
   "full": true,
@@ -3418,14 +3418,16 @@
   "command": [
     "scripts/check.py",
     "--full",
+    "--jobs",
+    "4",
     "--reference-gem-home",
-    "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/previous-runtime/_nw_ef94/gems",
+    ".build/previous-runtime/_nw_ef94/gems",
     "--package",
-    "dist/SwiftPods-0.1.0-dev-readiness"
+    "dist/SwiftPods-0.1.0-dev-final-complete"
   ],
-  "source_digest": "0ffb4d3bc3745aa9110fafc7583e20eadb1e55a383cbec314d62b05077479d5d",
+  "source_digest": "130fbcf17f80237938a6e82c2138a727117a4dc5a12cd8aed633c72a1ae31d30",
   "contract_digest": "1f095e381721769a75292c3e034ab6811c23d9ed91b71cd79aefbc3da36d06ec",
-  "started_at": "2026-10-15T14:46:15.469611+00:00",
+  "started_at": "2026-10-15T16:51:59.681043+00:00",
   "host": {
     "os": "27.0.1",
     "architecture": "arm64"
@@ -3450,14 +3452,14 @@
     }
   },
   "executable": {
-    "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/.worktrees/release-readiness-20261015/.build/debug/swiftpods",
-    "sha256": "f46e71f539126d2cb79e16fc12069f87a56187cccba810abe281395776c8580f"
+    "path": "/Users/yurii.levchenko/Desktop/Wonderland/swiftpods/swiftpods-code/.build/debug/swiftpods",
+    "sha256": "575de7fcc160a3e11d1900f8aa1b0d97fd7d40d7665b95fd9f2879b6c84b44ed"
   },
-  "duration_seconds": 2125.862995958014,
+  "duration_seconds": 1346.5645918329828,
   "external_collection": {
-    "manifest_sha256": "52c0c216545dc49f286588a21059790312cacf91fd95008b0f79b9f28e282439",
+    "manifest_sha256": "dba447a21f6c47493b426a007a04ea704286ae43579ea516db4afb6f7072f6df",
     "source_checkout_revision": {
-      "commit": "cc623010af913f5c81065b54ead07436b127ab7f",
+      "commit": "8ccd3dd0c21e96ede804261a8b70fd0dab2eea7f",
       "dirty": false
     }
   }
